@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/base}">
+<head>
+    <title>Gestionar contratos</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
+</head>
+<body>
+<div class="container">
+    <h1>Lista de contratos</h1>
+    <div th:replace="fragments/base" ></div>
+    <div th:if="${#lists.isEmpty(contracts)}">
+        No hay contratos
+    </div>
+    <table th:unless="${#lists.isEmpty(contracts)}"  class="table table-striped">
+        <thead>
+        <tr>
+            <th>Numero de contrato</th>
+            <th>Fecha inicio</th>
+            <th>Fecha fin</th>
+            <th>Descripcion</th>
+            <th>Cantidad de servicios</th>
+            <th>Unidad de medidas</th>
+            <th>Precio de unidad</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="contract: ${contracts}">
+            <td th:text="${contract.number}"></td>
+            <td th:text="${contract.dateBeginning}"></td>
+            <td th:text="${contract.dateEnding}"></td>
+            <td th:text="${contract.description}"></td>
+            <td th:text="${contract.quantityServices}"></td>
+            <td th:text="${contract.unitsOfMeasure}"></td>
+            <td th:text="${contract.priceUnit}"></td>
+            <td> <a th:href="@{/contract/update/{number}/(number=${contract.number})}" class="btn btn-warning" role="button">Edita contrato</a></td>
+            <td> <a th:href="@{/contract/delete/{number}/(number=${contract.number})}" class="btn btn-danger" role="button">Borrar contrato</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="add" class="btn btn-success" role="button">Añade contrato</a>
+    <a href="/user/list" class="btn btn-success" role="button">Volver a inicio</a>
+</div>
+</body>
+</html>

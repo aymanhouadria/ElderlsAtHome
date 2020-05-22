@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edita este contrato</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
+</head>
+<body>
+<h2>Editando contrato</h2>
+<h3>Nuevos datos de contrato</h3>
+<form action="#" th:action="@{/contract/update}"
+      th:object="${contract}" method="post">
+    <table>
+        <tr>
+            <td><label>Numero de contrato:</label></td>
+            <td><input type="text" th:field="*{number}" readonly/></td>
+        </tr>
+        <tr>
+            <td><label>Fecha de inicio</label></td>
+            <td><input type="text" class="form-control" id="dateBeginning" th:field="*{dateBeginning}" placeholder="MM/dd/yyyy" /></td>
+            <td th:if="${#fields.hasErrors('dateBeginning')}" th:errors="*{dateBeginning}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Fecha de fin:</label></td>
+            <td><input type="text" class="form-control" id="dateEnding" th:field="*{dateEnding}" placeholder="MM/dd/yyyy" /></td>
+            <td th:if="${#fields.hasErrors('dateEnding')}" th:errors="*{dateEnding}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Descripción:</label></td>
+            <td><input type="text" class="form-control" id="description" th:field="*{description}" placeholder="max. 50 caracters"/></td>
+            <td th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Cantidad de servicios</label></td>
+            <td><input type="text" class="form-control" id="quantityServices" th:field="*{quantityServices}" placeholder="max. 20 caracters"/></td>
+            <td th:if="${#fields.hasErrors('quantityServices')}" th:errors="*{quantityServices}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Unidades de medida</label></td>
+            <td><input type="text" class="form-control" id="unitsOfMeasure" th:field="*{unitsOfMeasure}" placeholder="max. 20 caracters"/></td>
+            <td th:if="${#fields.hasErrors('unitsOfMeasure')}" th:errors="*{unitsOfMeasure}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Precio de unidad</label></td>
+            <td><input type="text" class="form-control" id="priceUnit" th:field="*{priceUnit}" placeholder="max. 10 caracters"/></td>
+            <td th:if="${#fields.hasErrors('priceUnit')}" th:errors="*{priceUnit}" class="error"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Edita contrato" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

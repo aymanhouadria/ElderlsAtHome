@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edita esta empresa</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
+</head>
+<body>
+<h2>Editando empresa</h2>
+<h3>Nuevos datos de empresa</h3>
+<form action="#" th:action="@{/company/update}"
+      th:object="${company}" method="post">
+    <table>
+        <tr>
+            <td><label>CIF de empresa:</label></td>
+            <td><input type="text" th:field="*{CIF}" readonly/></td>
+        </tr>
+        <tr>
+            <td><label>Nombre de empresa:</label></td>
+            <td><input type="text" class="form-control" id="name" th:field="*{name}" placeholder="max. 50 caracters" /></td>
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Dirección de empresa:</label></td>
+            <td><input type="text" class="form-control" id="address" th:field="*{address}" placeholder="max. 20 caracters" /></td>
+            <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Persona de contacto de empresa:</label></td>
+            <td><input type="text" class="form-control" id="CPName" th:field="*{CPName}" placeholder="max. 20 caracters"/></td>
+            <td th:if="${#fields.hasErrors('CPName')}" th:errors="*{CPName}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Teléfono de la persona de contacto:</label></td>
+            <td><input type="text" class="form-control" id="CPPhoneNumber" th:field="*{CPPhoneNumber}" placeholder="max. 25 caracters"/></td>
+            <td th:if="${#fields.hasErrors('CPPhoneNumber')}" th:errors="*{CPPhoneNumber}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Email de la persona de contacto:</label></td>
+            <td><input type="text" class="form-control" id="CPPersonEmail" th:field="*{CPPersonEmail}" placeholder="max. 20 caracters"/></td>
+            <td th:if="${#fields.hasErrors('CPPersonEmail')}" th:errors="*{CPPersonEmail}" class="error"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Edita empresa" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+
+    <!-- app css  -->
+    <link type="text/css" th:href="@{/css/ElderlyPeopleCSS.css}" href="/css/ElderlyPeopleCSS.css"
+          rel="stylesheet"/>
+
+    <title layout:title-pattern="$CONTENT_TITLE">Elderly People Application</title>
+</head>
+
+<body class="container">
+<div class="loggeduser" th:object="${session}">
+    <p th:if="*{user == null}">
+        No autenticat <a href="/login" th:href="@{/login}">Entrar</a>
+    </p>
+    <p th:unless="*{user == null}">
+        Autenticat com <span th:text="*{user.username}"></span> <a
+            href="/logout" th:href="@{/logout}">Eixir</a>
+    </p>
+</div>
+</body>
+</html>
