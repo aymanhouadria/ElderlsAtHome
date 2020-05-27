@@ -1,14 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>EI1027</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
 </head>
-<body>
-<h1>Gestión de la aplicación</h1>
-<ul>
-    <li><a href="user/list">Iniciar sesión como usuario privado</a></li>
-</ul>
+<body class=" bg-dark row align-items-center justify-content-center vh-150">
+
+
+   <nav class=" col-sm-12 navbar navbar-expand-lg navbar-dark bg-info">
+       <button class="navbar-toggler" data-target="Registrarse" data-toggle="collapse" type="button">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="menu">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                   <a href="#" class="nav-link">Registrarse</a>
+               </li>
+               <li class="nav-item active">
+                   <a href="#" class="nav-link">FAQ</a>
+               </li>
+               <li class="nav-item active">
+                   <a href="#" class="nav-link">Acerca de EAH</a>
+               </li>
+           </ul>
+       </div>
+   </nav>
+   <header class=" text-center col-sm-12 justify-content-center vh-50">
+       <div >
+           <h1>ELDER'S AT HOME</h1>
+       </div>
+   </header>
+    <hr>
+    <div class=" col-sm-9">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum."</p>
+        <img src="images/imagen.jpg" >
+    </div>
+
+
+    <div class=" col-sm-12  row align-items-center justify-content-center vh-80  ">
+
+        <a href="/user/list" class="btn btn-info" role="button">ENTRAR COMO PERSONA DE LA 3º EDAD</a>
+        <a href="/user/list" class="btn btn-info" role="button">Iniciar sesión como  Empresa</a>
+        <a href="/user/list" class="btn btn-info" role="button">Iniciar sesión como  Voluntario</a>
+        <a href="/user/list" class="btn btn-info" role="button">Iniciar sesión como usuario privado</a>
+
+
+
+
+    </div>
+
+
+
+
+
+
 </body>
 </html>

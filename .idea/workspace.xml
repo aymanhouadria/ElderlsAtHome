@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3c06654-8a48-4ced-99f7-890c4ff17531" name="Default Changelist" comment="" />
+    <list default="true" id="e3c06654-8a48-4ced-99f7-890c4ff17531" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ElderlsAtHome - Acceso directo (2).lnk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ElderlsAtHome - Acceso directo.lnk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/ElderlyPeopleCSS.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/INDICE.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/imagen.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/ElderlyPeopleCSS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/ContractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/ContractDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/ElderlyPeopleCSS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/contract/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/contract/add.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +29,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,19 +41,30 @@
     </option>
   </component>
   <component name="ProjectId" id="1Yw6Zl3ht8Ysl9waNbPxEHvFKpl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\IdeaProjects\ElderlsAtHome\src\main\resources\static\images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ElderlyPeopleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -73,8 +101,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583841366874</updated>
+      <workItem from="1590284870674" duration="2980000" />
+      <workItem from="1590290264458" duration="2623000" />
+      <workItem from="1590346906254" duration="311000" />
+      <workItem from="1590525852039" duration="15522000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Project_Structure" timestamp="1583841535126">
@@ -90,6 +128,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="699" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588509645336" />
+    <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590287518140">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1590287518140" />
     <state x="694" y="283" key="EnvironmentVariablesDialog" timestamp="1583846026508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -100,29 +142,42 @@
     <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590164916798" />
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1585756140245" />
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583852118789" />
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1588884586231">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="549" y="261" key="Github.ShareDialog" timestamp="1590165361246">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="549" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1590165361246" />
+    <state x="433" y="68" key="Github.UntrackedFilesDialog" timestamp="1590165371612">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="433" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590165371612" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1590555262933">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590555262933" />
     <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1588884586231">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1590555262933">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590555262933" />
     <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1588884586231">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1590555262933">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590555262933" />
     <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1588884586231">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1590555262933">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590555262933" />
     <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
     <state x="490" y="176" key="Maven.ArtifactSearchDialog" timestamp="1588628255873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="490" y="176" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588628255873" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1583841839932">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="328" y="17" key="SettingsEditor" timestamp="1590541171327">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="328" y="17" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590541171327" />
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583841839932" />
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1589988837385">
       <screen x="0" y="0" width="1920" height="1040" />

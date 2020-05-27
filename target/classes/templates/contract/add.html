@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Gestionar empresas</title>
+    <title>Gestionar contratos</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
 </head>
 <body>
-<h2>Nueva empresa</h2>
+<h2>Nuevo contrato</h2>
 <form action="#" th:action="@{/contract/add}"
       th:object="${contract}" method="post">
     <table>
@@ -16,6 +16,13 @@
             <td><input type="text" class="form-control" id="number" th:field="*{number}" placeholder="max. 20 caracters" /></td>
             <td th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="error"></td>
         </tr>
+        <!---
+        <tr>
+            <td><label>Empresa asociada</label></td>
+            <td><input type="text" class="form-control" id="name" th:field="${company.CIF}" placeholder="CIF de empresa" /></td>
+            <td th:if="${#fields.hasErrors('CIF')}" th:errors="${company.CIF}" class="error"></td>
+        </tr>
+        --->
         <tr>
             <td><label>Fecha de inicio:</label></td>
             <td><input type="text" class="form-control" id="dateBeginning" th:field="*{dateBeginning}" placeholder="MM/dd/yyyy" /></td>
