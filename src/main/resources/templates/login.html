@@ -3,31 +3,71 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{fragments/base}">
 <head>
-    <link rel="stylesheet" type="text/css"
-          href="/css/ElderlyPeopleCSS.css"
-          th:href="@{/css/ElderlyPeopleCSS.css}"/>
+
     <title>Login</title>
     <meta charset="UTF-8"/>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/EstilosLogin.css" th:href="@{/css/EstilosLogin.css}"/>
 
 </head>
-<body>
-<div layout:fragment="content">
-    <h2>Accés</h2>
-    <form action="#" th:action="@{/login}"
-          th:object="${user}" method="post">
-        <p>
-            <label>Nom d'usuari:</label>
-            <input class="form_control" type="text" th:field="*{username}"/>
-        <div class="error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
-        </p>
-        <p>
-            <label>Contrasenya:</label>
-            <input class="form_control" type="password" th:field="*{password}"/>
-        <div class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
-        </p>
-        <input type="submit" value="Accedir" />
-    </form>
-</div>
+<body >
+<nav class=" col-sm-12 navbar navbar-expand-lg navbar-dark bg-info">
+    <button class="navbar-toggler" data-target="Registrarse" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a href="#"class="btn btn-success" role="button">REGISTRARSE</a>
+            </li>
+            <li class="nav-item active">
+                <a href="#" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item active">
+                <a href="#" class="nav-link">Acerca de EAH</a>
+            </li>
+            <li class="nav-item active ">
+                <a href="../Index.html" class="nav-link ">INICIO</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="container">
+
+        <div class="row  justify-content-center pt-5 mt-5 mr-1">
+            <div class="col-md-5 formulario ">
+                <div class="col-12 text-center">
+                    <img src="../images/avatar.png" width="100" height="100">
+
+                </div >
+
+                <form  action="#" th:action="@{/login}"
+                      th:object="${user}" method="post">
+                    <div class="form-group text-center pt-2">
+                        <h1 class="text-light" > INICIAR SESIÓN</h1>
+                    </div>
+                    <div class="form-group text-center pt-4">
+                        <input class="form_control col-md-9" placeholder="Ingrese su Usuario" type="text" th:field="*{username}"/>
+                        <div class="error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+
+                    </div>
+
+                    <div class="form-group text-center pb-3">
+                        <input class="form_control col-md-9" placeholder="Ingrese su Contraseña" type="password" th:field="*{password}"/>
+
+                        <div class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+
+                    </div >
+                    <div class="form-group pb-5 text-center ">
+                        <button type="submit" class="btn btn-info col-sm-12"><i class="fas fa-sign-in-alt"></i>INGRESAR</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

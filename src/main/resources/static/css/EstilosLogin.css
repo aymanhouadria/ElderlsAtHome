@@ -5,12 +5,11 @@ body{
     background-attachment: fixed;
 }
 
-
-
 .formulario {
-    background: rgba(39, 41, 59, 0.5);
+    background: rgba(81, 96, 241, 0.5);
     padding: 50px;
     border-radius:10px;
     box-shadow: 0 0 30px rgba(0,0,0,0.568);
 
 }
+

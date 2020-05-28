@@ -13,12 +13,16 @@
 </head>
 
 <body>
-<div layout:fragment="content">
-    <h1>Llista d'usuaris del sistema</h1>
+<div layout:fragment="content " >
+    <div class="justify-content-center text-center">
+        <h1 class="text-secondary" >PAGINA PRINCIPAL</h1>
+    </div>
+
     <div th:replace="fragments/base" ></div>
     <div th:if="${#lists.isEmpty(users)}">
         No hi ha usuaris
     </div>
+
     <table th:unless="${#lists.isEmpty(users)}"  class="table table-condensed">
         <thead>
         <tr>
@@ -27,8 +31,9 @@
         </thead>
 
         <tbody>
+
         <tr th:each="user: ${users}">
-            <td th:text="${user.username}"></td>
+            <td   th:text="${user.username}"></td>
         </tr>
         </tbody>
     </table>

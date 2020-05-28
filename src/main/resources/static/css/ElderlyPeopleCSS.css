@@ -1,13 +1,13 @@
 /* Estil aplicat al cos de la pàgina */
 body {
    font-family: Helvetica, Arial, sans-serif;
-   background-color: darkblue;
+   background-color: #e8e8ec;
 }
 
 /* Capçalera de nivell 1 */
 h1 {
    font-size: x-large;
-   color: orange;
+
 }
 
 /* Capçalera de nivell 2 */
