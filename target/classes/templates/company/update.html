@@ -4,12 +4,12 @@
     <title>Edita esta empresa</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
+    <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
 </head>
-<body>
-<h2>Editando empresa</h2>
+<body class="align-items-center justify-content-center">
+<h2 class="pt-6">Editando empresa</h2>
 <h3>Nuevos datos de empresa</h3>
-<form action="#" th:action="@{/company/update}"
+<form action="#" th:action="@{/company/update}" class="col-sm-5 formulario"
       th:object="${company}" method="post">
     <table>
         <tr>
@@ -42,7 +42,7 @@
             <td th:if="${#fields.hasErrors('CPPersonEmail')}" th:errors="*{CPPersonEmail}" class="error"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" value="Edita empresa" /></td>
+            <td colspan="2"><input type="submit" class="btn btn-info" value="Edita empresa" /></td>
         </tr>
     </table>
 </form>

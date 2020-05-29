@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edita este contrato</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
+</head>
+<body class="align-items-center justify-content-center">
+<h2 class="pt-6">Editando contrato</h2>
+<h3>Nuevos datos de contrato</h3>
+<form action="#" th:action="@{/contract/update}" class=" col-sm-5 formulario"
+      th:object="${request}" method="post">
+    <table>
+        <tr>
+            <td><label>Numero de solicitud:</label></td>
+            <td><input type="text" th:field="*{number}" readonly/></td>
+        </tr>
+        <tr>
+            <td><label>DNI:</label></td>
+            <td><input type="text" th:field="*{DNI}" readonly/></td>
+        </tr>
+        <tr>
+            <td><label>Tipo de Servicio:</label></td>
+            <td><input type="text" class="form-control" id="serviceType" th:field="*{serviceType}" placeholder="max. 20 caracters" /></td>
+            <td th:if="${#fields.hasErrors('serviceType')}" th:errors="*{serviceType}" class="error"></td>
+        </tr>
+
+        <tr>
+            <td><label>Fecha de creación:</label></td>
+            <td><input type="text" class="form-control" id="creationDate" th:field="*{creationDate}" placeholder="MM/dd/yyyy" /></td>
+            <td th:if="${#fields.hasErrors('creationDate')}" th:errors="*{creationDate}" class="error"></td>
+        </tr>
+
+        <tr>
+            <td><label>Estado:</label></td>
+            <td><input type="text" class="form-control" id="state" th:field="*{state}" placeholder="max. 20 caracters" /></td>
+            <td th:if="${#fields.hasErrors('state')}" th:errors="*{state}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Fecha de aprovación:</label></td>
+            <td><input type="text" class="form-control" id="approvedDate" th:field="*{approvedDate}" placeholder="MM/dd/yyyy" /></td>
+            <td th:if="${#fields.hasErrors('approvedDate')}" th:errors="*{approvedDate}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Fecha de rechazo:</label></td>
+            <td><input type="text" class="form-control" id="rejectedDate" th:field="*{rejectedDate}" placeholder="MM/dd/yyyy" /></td>
+            <td th:if="${#fields.hasErrors('rejectedDate')}" th:errors="*{rejectedDate}" class="error"></td>
+        </tr>
+        <tr>
+            <td><label>Comentarios:</label></td>
+            <td><input type="text" class="form-control" id="comments" th:field="*{comments}" placeholder="max. 100 caracteres"/></td>
+            <td th:if="${#fields.hasErrors('comments')}" th:errors="*{comments}" class="error"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" class="btn btn-info" value="Edita solicitud" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

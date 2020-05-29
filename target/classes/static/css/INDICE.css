@@ -1,0 +1,16 @@
+body{
+    background-image: url("../images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.formulario {
+    background: rgba(39, 41, 59, 0.5);
+    padding: 50px;
+    border-radius:10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.568);
+
+}
