@@ -2,6 +2,7 @@ package Elderly.People.Project.controller;
 
 import javax.servlet.http.HttpSession;
 
+import Elderly.People.Project.dao.RequestDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,10 +27,13 @@ public class UserController {
         {
             model.addAttribute("user", new UserDetails());
             HttpSession nextURL;
-            session.setAttribute("nextURL", "/user/list");
+            session.setAttribute("nextURL", "/request/listCas");
             return "login";
         }
         model.addAttribute("users", userDao.listAllUsers());
-        return "user/list";
+        return "request/listCas";
     }
+
+
+
 }

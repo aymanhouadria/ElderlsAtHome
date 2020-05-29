@@ -11,10 +11,7 @@ h1 {
 }
 
 /* Capçalera de nivell 2 */
-h2 {
-   font-size: large;
-   color: blue;
-}
+
 
 /* Classe CSS error */
 .error {

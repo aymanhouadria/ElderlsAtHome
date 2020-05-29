@@ -11,15 +11,18 @@ import java.util.Date;
 
 public final class RequestRowMapper implements RowMapper<Request> {
     public Request mapRow(ResultSet rs, int rowNum) throws SQLException {
+
         Request request = new Request();
         request.setNumber(rs.getString("number"));
-        request.setServiceType(rs.getString("service_type"));
-        request.setCreationDate(rs.getDate("creation_date"));
-        request.setState(rs.getString("CPName"));
-        request.setApprovedDate(rs.getDate("CPPhoneNumber"));
-        request.setRejectedDate(rs.getDate("CPPersonEmail"));
-        request.setComments(rs.getString("CPPersonEmail"));
-        request.setEndDate(rs.getDate("CPPersonEmail"));
+        request.setDNI(rs.getString("dni"));
+        request.setNumberc(rs.getString("numberc"));
+        request.setServiceType(rs.getString("servicetype"));
+        request.setCreationDate(rs.getDate("creationdate"));
+        request.setState(rs.getString("state"));
+        request.setApprovedDate(rs.getDate("approveddate"));
+        request.setRejectedDate(rs.getDate("rejecteddate"));
+        request.setComments(rs.getString("comments"));
+        request.setEndDate(rs.getDate("enddate"));
 
         return request;
     }

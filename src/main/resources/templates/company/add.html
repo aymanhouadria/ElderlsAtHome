@@ -4,47 +4,50 @@
     <title>Gestionar empresas</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
+    <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
 </head>
-<body>
-<h2>Nueva empresa</h2>
-<form action="#" th:action="@{/company/add}"
-      th:object="${company}" method="post">
-    <table>
-        <tr>
-            <td><label>CIF empresa:</label></td>
-            <td><input type="text" class="form-control" id="CIF" th:field="*{CIF}" placeholder="max. 20 caracters" /></td>
-            <td th:if="${#fields.hasErrors('CIF')}" th:errors="*{CIF}" class="error"></td>
-        </tr>
-        <tr>
-            <td><label>Nombre de empresa:</label></td>
-            <td><input type="text" class="form-control" id="name" th:field="*{name}" placeholder="max. 50 caracters" /></td>
-            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></td>
-        </tr>
-        <tr>
-            <td><label>Dirección de empresa:</label></td>
-            <td><input type="text" class="form-control" id="address" th:field="*{address}" placeholder="max. 20 caracters" /></td>
-            <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="error"></td>
-        </tr>
-        <tr>
-            <td><label>Persona de contacto de empresa:</label></td>
-            <td><input type="text" class="form-control" id="CPName" th:field="*{CPName}" placeholder="max. 20 caracters"/></td>
-            <td th:if="${#fields.hasErrors('CPName')}" th:errors="*{CPName}" class="error"></td>
-        </tr>
-        <tr>
-            <td><label>Teléfono de la persona de contacto:</label></td>
-            <td><input type="text" class="form-control" id="CPPhoneNumber" th:field="*{CPPhoneNumber}" placeholder="max. 25 caracters"/></td>
-            <td th:if="${#fields.hasErrors('CPPhoneNumber')}" th:errors="*{CPPhoneNumber}" class="error"></td>
-        </tr>
-        <tr>
-            <td><label>Email de la persona de contacto:</label></td>
-            <td><input type="text" class="form-control" id="CPPersonEmail" th:field="*{CPPersonEmail}" placeholder="max. 20 caracters"/></td>
-            <td th:if="${#fields.hasErrors('CPPersonEmail')}" th:errors="*{CPPersonEmail}" class="error"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Añade empresa" /></td>
-        </tr>
-    </table>
-</form>
+<body class=" justify-content-center text-center">
+<h2 class="pt-6">Nueva empresa</h2>
+<div class=" col-sm-5 justify-content-center">
+    <form action="#" th:action="@{/company/add}" class=" formulario"
+          th:object="${company}" method="post">
+        <table>
+            <tr>
+                <td><label>CIF empresa:</label></td>
+                <td><input type="text" class="form-control" id="CIF" th:field="*{CIF}" placeholder="max. 20 caracters" /></td>
+                <td th:if="${#fields.hasErrors('CIF')}" th:errors="*{CIF}" class="error"></td>
+            </tr>
+            <tr>
+                <td><label>Nombre de empresa:</label></td>
+                <td><input type="text" class="form-control" id="name" th:field="*{name}" placeholder="max. 50 caracters" /></td>
+                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></td>
+            </tr>
+            <tr>
+                <td><label>Dirección de empresa:</label></td>
+                <td><input type="text" class="form-control" id="address" th:field="*{address}" placeholder="max. 20 caracters" /></td>
+                <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="error"></td>
+            </tr>
+            <tr>
+                <td><label>Persona de contacto de empresa:</label></td>
+                <td><input type="text" class="form-control" id="CPName" th:field="*{CPName}" placeholder="max. 20 caracters"/></td>
+                <td th:if="${#fields.hasErrors('CPName')}" th:errors="*{CPName}" class="error"></td>
+            </tr>
+            <tr>
+                <td><label>Teléfono de la persona de contacto:</label></td>
+                <td><input type="text" class="form-control" id="CPPhoneNumber" th:field="*{CPPhoneNumber}" placeholder="max. 25 caracters"/></td>
+                <td th:if="${#fields.hasErrors('CPPhoneNumber')}" th:errors="*{CPPhoneNumber}" class="error"></td>
+            </tr>
+            <tr>
+                <td><label>Email de la persona de contacto:</label></td>
+                <td><input type="text" class="form-control" id="CPPersonEmail" th:field="*{CPPersonEmail}" placeholder="max. 20 caracters"/></td>
+                <td th:if="${#fields.hasErrors('CPPersonEmail')}" th:errors="*{CPPersonEmail}" class="error"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" class="btn btn-info" value="Añade empresa" /></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
 </body>
 </html>

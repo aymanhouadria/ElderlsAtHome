@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.DuplicateFormatFlagsException;
 import java.util.NoSuchElementException;
 
+
 @Controller
 @RequestMapping("/contract")
 public class ContractController {
@@ -25,7 +26,7 @@ public class ContractController {
 
 
     @Autowired
-    public void setCompanyDao(ContractDao contractDao) {
+    public void setContractDao(ContractDao contractDao) {
         this.contractDao = contractDao;
     }
 

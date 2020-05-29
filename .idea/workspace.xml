@@ -2,21 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c06654-8a48-4ced-99f7-890c4ff17531" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/EstilosLogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/FondoIndice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/candado.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/fondo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/RequestValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/request/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/request/listCas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/request/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ContractValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ContractValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/RequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/ElderlyPeopleCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/ElderlyPeopleCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/INDICE.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/INDICE.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/company/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/company/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/company/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/company/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/company/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/company/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/logininfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/logininfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/request/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/request/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/RequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/RequestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/RequestDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/RequestDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/RequestRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/RequestRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/model/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/model/Request.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/logininfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/logininfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/request/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/request/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -56,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/request" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -64,6 +84,9 @@
     <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\IdeaProjects\ElderlsAtHome\src\main\resources\templates\request" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USUARIO\IdeaProjects\ElderlsAtHome\src\main\resources\static\images" />
     </key>
@@ -108,7 +131,8 @@
       <workItem from="1590346906254" duration="311000" />
       <workItem from="1590525852039" duration="17102000" />
       <workItem from="1590557584721" duration="2927000" />
-      <workItem from="1590618501040" duration="18773000" />
+      <workItem from="1590618501040" duration="20285000" />
+      <workItem from="1590704415296" duration="38693000" />
     </task>
     <task id="LOCAL-00001" summary="Diseño orientativo de la pagina de inicio.">
       <created>1590555532533</created>
@@ -117,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590555532533</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="diseño de login y cambios en el inicio y perfil de usuario">
+      <created>1590638881505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590638881505</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +157,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Diseño orientativo de la pagina de inicio." />
-    <option name="LAST_COMMIT_MESSAGE" value="Diseño orientativo de la pagina de inicio." />
+    <MESSAGE value="diseño de login y cambios en el inicio y perfil de usuario" />
+    <option name="LAST_COMMIT_MESSAGE" value="diseño de login y cambios en el inicio y perfil de usuario" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Project_Structure" timestamp="1583841535126">
@@ -142,13 +174,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="699" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588509645336" />
+    <state x="-1155" y="334" key="#com.intellij.ide.util.MemberChooser" timestamp="1590740289426">
+      <screen x="-1920" y="130" width="1920" height="1040" />
+    </state>
+    <state x="-1155" y="334" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590740289426" />
     <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590287518140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1590287518140" />
-    <state x="290" y="0" key="CommitChangelistDialog2" timestamp="1590555526765">
+    <state x="290" y="0" key="CommitChangelistDialog2" timestamp="1590638876618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="290" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590638876618" />
     <state x="290" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590555526765" />
     <state x="96" y="87" key="DiffContextDialog" timestamp="1590555624857">
       <screen x="0" y="0" width="1366" height="728" />
@@ -172,28 +209,32 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590165371612" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1590638365591">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="509" key="GridCell.Tab.0.bottom" timestamp="1590751821405">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590638365591" />
+    <state width="1877" height="509" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590751821405" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590560613435" />
     <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1590638365591">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="509" key="GridCell.Tab.0.center" timestamp="1590751821405">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590638365591" />
+    <state width="1877" height="509" key="GridCell.Tab.0.center/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590751821405" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590560613435" />
     <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1590638365591">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="509" key="GridCell.Tab.0.left" timestamp="1590751821405">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590638365591" />
+    <state width="1877" height="509" key="GridCell.Tab.0.left/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590751821405" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590560613435" />
     <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1590638365591">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="509" key="GridCell.Tab.0.right" timestamp="1590751821405">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590638365591" />
+    <state width="1877" height="509" key="GridCell.Tab.0.right/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590751821405" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590560613435" />
     <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
     <state x="490" y="176" key="Maven.ArtifactSearchDialog" timestamp="1588628255873">
@@ -205,9 +246,10 @@
     </state>
     <state x="93" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590556288725" />
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583841839932" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1590556309453">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1590639109570">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590639109570" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590556309453" />
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1589988837385">
       <screen x="0" y="0" width="1920" height="1040" />

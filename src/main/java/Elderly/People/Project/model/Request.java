@@ -5,6 +5,8 @@ import java.util.Date;
 
 public class Request {
     private String number;
+    private String DNI;
+    private String numberc;
     private String serviceType;
     private Date creationDate;
     private String state;
@@ -23,6 +25,18 @@ public class Request {
 
     public void setNumber(String number) {
         this.number =number;
+    }
+
+    public String getDNI() { return DNI; }
+
+    public void setDNI(String DNI) { this.DNI = DNI; }
+
+    public String getNumberc() {
+        return numberc;
+    }
+
+    public void setNumberc(String numberc) {
+        this.numberc = numberc;
     }
 
     public String getServiceType() {
@@ -82,16 +96,16 @@ public class Request {
     @Override
     public String toString() {
         return "Request{" +
-                "number='" + number + "\'" +
-                ", serviceType='" + serviceType + "\'" +
-                ", creationDate='" + creationDate + "\'" +
-                ", state=" + state + "\'" +
-                ", approvedDate=" + approvedDate + "\'" +
-                ", rejectedDATE=" + rejectedDate + "\'" +
-                ", comments=" + comments + "\'" +
-                ", endDate=" + endDate + "\'" +
-                "}";
+                "number='" + number + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", numberc='" + numberc + '\'' +
+                ", serviceType='" + serviceType + '\'' +
+                ", creationDate=" + creationDate +
+                ", state='" + state + '\'' +
+                ", approvedDate=" + approvedDate +
+                ", rejectedDate=" + rejectedDate +
+                ", comments='" + comments + '\'' +
+                ", endDate=" + endDate +
+                '}';
     }
-
-
 }

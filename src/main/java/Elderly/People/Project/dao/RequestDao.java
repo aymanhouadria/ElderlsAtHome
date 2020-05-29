@@ -21,10 +21,12 @@ public class RequestDao {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    void addRequest(Request request) {
-        String sql = "insert into request (number, service_type, creation_date, state, approved_date, rejected_date, comments, end_date) values (?, ?, ?, ?, ?, ?, ?, ?)";
+    public void addRequest(Request request) {
+        String sql = "insert into request (number, DNI, numberc, servicetype, creationdate, state, approveddate, rejecteddate, comments, enddate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 request.getNumber(),
+                request.getDNI(),
+                request.getNumberc(),
                 request.getServiceType(),
                 request.getCreationDate(),
                 request.getState(),
@@ -35,15 +37,15 @@ public class RequestDao {
         );
     }
 
-    void deleteRequest(Request request) {
-        String sql = "delete from company where number = ?";
-        this.jdbcTemplate.update(sql, request.getNumber());
+    public void deleteRequest(String number) {
+        String sql = "delete from request where number = ?";
+        this.jdbcTemplate.update(sql, number);
     }
 
-    void updateRequest(Request request) {
-        String sql = "update request set number = ?, service_type = ?, creation_date = ?, state = ?, approved_date = ?, rejected_date = ?, comments = ?, end_date = ?";
+    public void updateRequest(Request request) {
+        String sql = "update request set  servicetype = ?, creationdate = ?, state = ?, approveddate = ?, rejecteddate = ?, comments = ?, enddate = ?";
         this.jdbcTemplate.update(sql,
-                request.getNumber(),
+
                 request.getServiceType(),
                 request.getCreationDate(),
                 request.getState(),
@@ -55,7 +57,7 @@ public class RequestDao {
     }
 
 
-    Request getRequest(String reqNumber) {
+    public Request getRequest(String reqNumber) {
         String sql = "SELECT * FROM request WHERE number = ?";
 
         try {
@@ -67,7 +69,7 @@ public class RequestDao {
     }
 
 
-    List<Request> getRequests() {
+    public List<Request> getRequests() {
         String sql = "SELECT * FROM request";
         try {
             List<Request> requests = jdbcTemplate.query(sql, new RequestRowMapper());
@@ -78,6 +80,21 @@ public class RequestDao {
             return new ArrayList<Request>();
         }
     }
+
+    public List<Request> getRequestsCas() {
+        String sql = "SELECT * FROM request WHERE state IS NULL";
+        try {
+            List<Request> requests = jdbcTemplate.query(sql, new RequestRowMapper());
+            return requests;
+        }
+
+        catch(EmptyResultDataAccessException e) {
+            return new ArrayList<Request>();
+        }
+    }
+
+
+
 
 
 }
