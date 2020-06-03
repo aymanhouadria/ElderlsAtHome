@@ -1,13 +1,8 @@
 package Elderly.People.Project.dao;
 import Elderly.People.Project.model.Volunteer;
-
 import org.springframework.jdbc.core.RowMapper;
-
-
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
 
 public final class VolunteerRowMapper implements RowMapper<Volunteer> {
     public Volunteer mapRow(ResultSet rs, int rowNum) throws SQLException {

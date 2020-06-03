@@ -10,8 +10,10 @@ public final class InvoiceRowMapper implements RowMapper<Invoice> {
     public Invoice mapRow(ResultSet rs, int rowNum) throws SQLException {
         
         Invoice invoice = new Invoice();
-        invoice.setDate((rs.getDate("date")));
         invoice.setNumber(rs.getString("number"));
+        invoice.setNumberr(rs.getString("numberr"));
+        invoice.setDate((rs.getDate("date")));
+        invoice.setDNI(rs.getString("dni"));
         invoice.setAmount(rs.getInt("amount"));
         invoice.setConcept(rs.getString("concept"));
 

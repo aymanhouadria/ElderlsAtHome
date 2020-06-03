@@ -6,7 +6,9 @@ import java.util.Date;
 
 public class Invoice {
     private String number;
+    private String numberr;
     private Date date;
+    private String DNI;
     private int amount;
     private String concept;
 
@@ -22,12 +24,28 @@ public class Invoice {
         this.number =number;
     }
 
+    public String getNumberr() {
+        return numberr;
+    }
+
+    public void setNumberr(String numberr) {
+        this.numberr = numberr;
+    }
+
     public Date getDate() {
         return date;
     }
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getDNI() {
+        return DNI;
+    }
+
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
     }
 
     public int getAmount() {
@@ -49,12 +67,12 @@ public class Invoice {
     @Override
     public String toString() {
         return "Invoice{" +
-                "number='" + number + "\'" +
-                ", date='" + date + "\'" +
-                ", amount='" + amount +
-                ", concept=" + concept + "\'" +
-                "}";
+                "number='" + number + '\'' +
+                ", numberr='" + numberr + '\'' +
+                ", date=" + date +
+                ", DNI='" + DNI + '\'' +
+                ", amount=" + amount +
+                ", concept='" + concept + '\'' +
+                '}';
     }
-
-
 }

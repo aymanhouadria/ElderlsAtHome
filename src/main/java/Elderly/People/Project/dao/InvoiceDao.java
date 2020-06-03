@@ -25,10 +25,13 @@ public class InvoiceDao {
     }
 
 
-    void addInvoice(Invoice invoice) {
-        String sql = "insert into Invoice (date, number, amount, concept) values (?, ?, ?, ?)";
+    public void addInvoice(Invoice invoice) {
+        String sql = "insert into Invoice ( number, numberr, date, dni,  amount, concept) values (?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
+                invoice.getNumber(),
+                invoice.getNumberr(),
                 invoice.getDate(),
+                invoice.getDNI(),
                 invoice.getNumber(),
                 invoice.getAmount(),
                 invoice.getConcept()
@@ -40,14 +43,16 @@ public class InvoiceDao {
     }
 
 
-    void deleteInvoice(Invoice invoice) {
-        String sql = "delete from Invoice where number = ?";
-        this.jdbcTemplate.update(sql, invoice.getNumber());
+    public void deleteInvoice(String number) {
+        String sql = "delete from invoice where number = ?";
+        this.jdbcTemplate.update(sql, number);
+
+
     }
 
 
-    void updateInvoice(Invoice invoice) {
-        String sql = "update contract set date = ?, amount = ?, concept = ?";
+    public void updateInvoice(Invoice invoice) {
+        String sql = "update contract set date = ?,  amount = ?, concept = ?";
         this.jdbcTemplate.update(sql,
                 invoice.getDate(),
                 invoice.getAmount(),
@@ -56,7 +61,7 @@ public class InvoiceDao {
     }
 
 
-    Invoice getInvoice(String number) {
+    public Invoice getInvoice(String number) {
         String sql = "SELECT * FROM Invoice WHERE number = ?";
 
         try {
@@ -68,7 +73,7 @@ public class InvoiceDao {
     }
 
 
-    List<Invoice> getElderlyInvoice() {
+    public List<Invoice> getInvoices() {
         String sql = "SELECT * FROM Invoice";
         try {
 

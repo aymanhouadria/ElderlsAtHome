@@ -27,21 +27,7 @@ public class ContractValidator implements Validator {
             if (contract.getDateBeginning().after(contract.getDateEnding()))
                 errors.rejectValue("dateEnding", "dateError", "La data final no pot ser anterior a la inicial");
 
-            /*
 
-            COMPROBAR SI EL FORMATO DE LA FECHA ES CORRECTO Y SI LAS FECHAS SON CORRECTAS
-
-            SimpleDateFormat example = new SimpleDateFormat("MM/dd/yyyy");
-
-            if (!contract.getDateEnding().equals(example)) {
-                errors.rejectValue("dateEnding", "dateFormatError", "El format de la data no es correcte");
-                System.out.println("777777777777777777777777777777777777777777777777");
-            }
-            if (!contract.getDateBeginning().equals(example)) {
-                errors.rejectValue("dateBeginning", "dateFormatError", "El format de la data no es correcte");
-                System.out.println("888888888888888888888888888888888888888888888");
-            }
-             */
         }
 
 
