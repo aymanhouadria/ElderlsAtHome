@@ -7,17 +7,17 @@ import java.sql.SQLException;
 public final class VolunteerRowMapper implements RowMapper<Volunteer> {
     public Volunteer mapRow(ResultSet rs, int rowNum) throws SQLException {
         Volunteer volunteer = new Volunteer();
-        volunteer.setUser(rs.getString("user"));
-        volunteer.setPwd(rs.getString("password"));
+        volunteer.setUser(rs.getString("userv"));
+        volunteer.setPwd(rs.getString("pwd"));
         volunteer.setAddress(rs.getString("address"));
         volunteer.setName(rs.getString("name"));
-        volunteer.setPhoneNumber(rs.getString("phone_number"));
+        volunteer.setPhoneNumber(rs.getString("phonenumber"));
         volunteer.setEmail(rs.getString("email"));
         volunteer.setHobbies(rs.getString("hobbies"));
-        volunteer.setApplicationDate(rs.getDate("application_date"));
-        volunteer.setAcceptationDate(rs.getDate("acceptation_date"));
+        volunteer.setApplicationDate(rs.getDate("applicationdate"));
+        volunteer.setAcceptationDate(rs.getDate("acceptationdate"));
         volunteer.setAccepted(rs.getBoolean("accepted"));
-        volunteer.setBirthDate(rs.getDate("birth_date"));
+        volunteer.setBirthDate(rs.getDate("birthdate"));
 
         return volunteer;
     }

@@ -21,8 +21,8 @@ public class VolunteerDao {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    void addVolunteer(Volunteer volunteer) {
-        String sql = "insert into volunteer (user, password, address, name, phone_numer, email, hobbies, application_date, acceptation_date, accepted, birth_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void addVolunteer(Volunteer volunteer) {
+        String sql = "insert into volunteer (userv, pwd, address, name, phonenubmer, email, hobbies, applicationdate, acceptationdate, accepted, birth_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 volunteer.getUser(),
                 volunteer.getPwd(),
@@ -38,15 +38,14 @@ public class VolunteerDao {
         );
     }
 
-    void deleteVolunteer(Volunteer volunteer) {
-        String sql = "delete from volunteer where user = ?";
-        this.jdbcTemplate.update(sql, volunteer.getUser());
+    public void deleteVolunteer(String userv) {
+        String sql = "delete from volunteer where userv = ?";
+        this.jdbcTemplate.update(sql, userv);
     }
 
-    void updateVolunteer(Volunteer volunteer) {
-        String sql = "update request set user = ?, password = ?, address = ?, name = ?, phone_number = ?, email = ?, hobbies = ?, application_date = ?, acceptation_date = ?, accepted = ?, birth_date= ?";
+    public void updateVolunteer(Volunteer volunteer) {
+        String sql = "update request set  pwd = ?, address = ?, name = ?, phonenumber = ?, email = ?, hobbies = ?, applicationdate = ?, acceptationdate = ?, accepted = ?, birthdate= ?";
         this.jdbcTemplate.update(sql,
-                volunteer.getUser(),
                 volunteer.getPwd(),
                 volunteer.getAddress(),
                 volunteer.getName(),
@@ -61,11 +60,11 @@ public class VolunteerDao {
     }
 
 
-    Volunteer getVolunteer(String user) {
-        String sql = "SELECT * FROM volunteer WHERE user = ?";
+    public Volunteer getVolunteer(String userv) {
+        String sql = "SELECT * FROM volunteer WHERE userv = ?";
 
         try {
-            return jdbcTemplate.queryForObject(sql, new Object[]{user}, new VolunteerRowMapper());
+            return jdbcTemplate.queryForObject(sql, new Object[]{userv}, new VolunteerRowMapper());
         }
         catch(EmptyResultDataAccessException e) {
             return null;
@@ -73,7 +72,7 @@ public class VolunteerDao {
     }
 
 
-    List<Volunteer> getVolunteers() {
+   public List<Volunteer> getVolunteers() {
         String sql = "SELECT * FROM volunteer";
         try {
             List<Volunteer> volunteers = jdbcTemplate.query(sql, new VolunteerRowMapper());
