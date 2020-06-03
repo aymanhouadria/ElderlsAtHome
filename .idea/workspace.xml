@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c06654-8a48-4ced-99f7-890c4ff17531" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/VolunteerValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ElderlyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ElderlyValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/SocialWorkerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/SocialWorkerValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/SocialWorkerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/SocialWorkerRowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/SocialWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/VolunteerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/VolunteerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleRowMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/VolunteerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/VolunteerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/VolunteerRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/VolunteerRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/ElderlyPeople.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/ElderlyPeople.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +113,7 @@
       <workItem from="1590755949642" duration="1305000" />
       <workItem from="1590830391914" duration="1183000" />
       <workItem from="1590953281437" duration="1933000" />
-      <workItem from="1591179062678" duration="12494000" />
+      <workItem from="1591179062678" duration="29817000" />
     </task>
     <task id="LOCAL-00001" summary="Diseño orientativo de la pagina de inicio.">
       <created>1590555532533</created>
@@ -143,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591186612804</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="creacion del controlador de volunteer y su validador">
+      <created>1591193623606</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591193623606</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +169,8 @@
     <MESSAGE value="diseño de login y cambios en el inicio y perfil de usuario" />
     <MESSAGE value="creacion de l requestController, RequestValidator, y sus vistas. Cambio en el direccionamiento de la pagina principal del UserCas. Cambio visual en las vistas de listados" />
     <MESSAGE value="creacion del invoice controller y su validador" />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion del invoice controller y su validador" />
+    <MESSAGE value="creacion del controlador de volunteer y su validador" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion del controlador de volunteer y su validador" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Project_Structure" timestamp="1583841535126">
@@ -171,19 +186,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="699" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588509645336" />
-    <state x="-1155" y="334" key="#com.intellij.ide.util.MemberChooser" timestamp="1591181774650">
+    <state x="-1155" y="334" key="#com.intellij.ide.util.MemberChooser" timestamp="1591207292341">
       <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state x="-1155" y="334" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591181774650" />
+    <state x="-1155" y="334" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591207292341" />
     <state x="-1265" y="461" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591182149700">
       <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
     <state x="-1265" y="461" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591182149700" />
     <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1590287518140" />
-    <state x="-1966" y="130" key="CommitChangelistDialog2" timestamp="1591186604317">
+    <state x="-1350" y="218" key="CommitChangelistDialog2" timestamp="1591193619175">
       <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state x="-1966" y="130" key="CommitChangelistDialog2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591186604317" />
+    <state x="-1350" y="218" key="CommitChangelistDialog2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591193619175" />
     <state x="290" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590638876618" />
     <state x="290" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590555526765" />
     <state x="96" y="87" key="DiffContextDialog" timestamp="1590555624857">
@@ -245,10 +260,10 @@
     </state>
     <state x="93" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590556288725" />
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583841839932" />
-    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2" timestamp="1591186669939">
+    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2" timestamp="1591193649464">
       <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591186669939" />
+    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591193649464" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590639109570" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590556309453" />
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1589988837385">

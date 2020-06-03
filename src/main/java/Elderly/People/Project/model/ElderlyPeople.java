@@ -16,7 +16,8 @@ public class ElderlyPeople {
     private Date dateCreation;
     private String alergies;
     private String diseases;
-    private String bankAccountCode;
+    private String UserCas;
+    private String bankAccountNummber;
 
     public ElderlyPeople() {
     }
@@ -69,9 +70,9 @@ public class ElderlyPeople {
         this.phoneNumber= phoneNumber;
     }
 
-    public String getBankAccountCode() { return bankAccountCode; }
+    public String getUserCas() { return UserCas; }
 
-    public void setBankAccountCode(String bankAccountCode) { this.bankAccountCode = bankAccountCode; }
+    public void setUserCas(String userCas) { UserCas = userCas; }
 
     public String getEmail() {
         return email;
@@ -113,24 +114,30 @@ public class ElderlyPeople {
         this.diseases = diseases;
     }
 
+    public String getBankAccountNummber() {
+        return bankAccountNummber;
+    }
+
+    public void setBankAccountNummber(String bankAccountNummber) {
+        this.bankAccountNummber = bankAccountNummber;
+    }
 
     @Override
     public String toString() {
         return "ElderlyPeople{" +
-                "DNI='" + DNI + "\'" +
-                ", name='" + name + "\'" +
-                ", surname='" + surname + "\'" +
-                ", address=" + address + "\'" +
-                ", birthDate='" + birthDate + "\'" +
-                ", phoneNumber='" + phoneNumber + "\'" +
-                ", bankAccountumber='" + bankAccountCode + "\'" +
-                ", email='" + email + "\'" +
-                ", userPwd='" + userPwd + "\'" +
-                ", dateCreation='" + dateCreation + "\'" +
-                ", alergies='" + alergies + "\'" +
-                ", diseases='" + diseases + "\'" +
-                "}";
+                "DNI='" + DNI + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", address='" + address + '\'' +
+                ", birthDate=" + birthDate +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", userPwd='" + userPwd + '\'' +
+                ", dateCreation=" + dateCreation +
+                ", alergies='" + alergies + '\'' +
+                ", diseases='" + diseases + '\'' +
+                ", UserCas='" + UserCas + '\'' +
+                ", bankAccountNummber='" + bankAccountNummber + '\'' +
+                '}';
     }
-
-
 }

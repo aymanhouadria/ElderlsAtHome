@@ -44,7 +44,7 @@ public class VolunteerDao {
     }
 
     public void updateVolunteer(Volunteer volunteer) {
-        String sql = "update request set  pwd = ?, address = ?, name = ?, phonenumber = ?, email = ?, hobbies = ?, applicationdate = ?, acceptationdate = ?, accepted = ?, birthdate= ?";
+        String sql = "update volunteer set  pwd = ?, address = ?, name = ?, phonenumber = ?, email = ?, hobbies = ?, applicationdate = ?, acceptationdate = ?, accepted = ?, birthdate= ?";
         this.jdbcTemplate.update(sql,
                 volunteer.getPwd(),
                 volunteer.getAddress(),
