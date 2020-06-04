@@ -42,7 +42,7 @@ public class RequestController {
 
     @RequestMapping(value="/add")
     public String addContract(Model model) {
-        model.addAttribute("request", new Request());
+        model.addAttribute("request", requestDao.getRequest());
         return "request/add";
     }
 
@@ -82,7 +82,7 @@ public class RequestController {
         } catch (DataAccessException ex) {
             throw new ElderlyPeopleException("Error en l'accés a la base de dades", "ErrorAccedintDades");
         }
-        return "redirect:list";
+        return "redirect:../contract/add";
     }
 
     @RequestMapping(value="/delete/{number}")

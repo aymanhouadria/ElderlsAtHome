@@ -34,7 +34,7 @@
             <tbody>
             <tr th:each="company: ${companiesService}">
 
-                <td th:text="${company.serviceType}"></td>
+                <td class=" text-light" th:text="${company.serviceType}"></td>
                 <td> <a href="/request/add" th:href="@{/request/add}" class="btn btn-warning" role="button">Solicitar</a></td>
 
 

@@ -1,5 +1,6 @@
 package Elderly.People.Project.dao;
 
+import Elderly.People.Project.model.Contract;
 import Elderly.People.Project.model.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -43,7 +44,7 @@ public class RequestDao {
     }
 
     public void updateRequest(Request request) {
-        String sql = "update request set  servicetype = ?, creationdate = ?, state = ?, approveddate = ?, rejecteddate = ?, comments = ?, enddate = ?";
+        String sql = "update request set  servicetype = ?, creationdate = ?, state = ?, approveddate = ?, rejecteddate = ?, comments = ?, enddate = ? WHERE number = ?";
         this.jdbcTemplate.update(sql,
 
                 request.getServiceType(),
@@ -52,7 +53,9 @@ public class RequestDao {
                 request.getApprovedDate(),
                 request.getRejectedDate(),
                 request.getComments(),
-                request.getEndDate()
+                request.getEndDate(),
+                request.getNumber()
+
         );
     }
 
@@ -81,10 +84,28 @@ public class RequestDao {
         }
     }
 
+
+    public Request getRequest() {
+        String sql = "SELECT MAX(number) as number FROM request ";
+        Request request =  new Request();
+        Request requestAux= new Request();
+        try {
+            request = jdbcTemplate.queryForObject(sql, new Object[]{}, new RequestRowMapperNumber());
+            long numero = Long.parseLong(request.getNumber()) + 1;
+            String numeroAux = numero+"";
+            requestAux.setNumber(numeroAux);
+            return requestAux;
+        }
+        catch(EmptyResultDataAccessException e) {
+            return null;
+        }
+    }
+
     public List<Request> getRequestsCas() {
         String sql = "SELECT * FROM request WHERE state IS NULL";
         try {
             List<Request> requests = jdbcTemplate.query(sql, new RequestRowMapper());
+
             return requests;
         }
 

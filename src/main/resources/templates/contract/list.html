@@ -10,11 +10,16 @@
 </head>
 <body>
 <div class="container">
-    <h1>Lista de contratos</h1>
     <div th:replace="fragments/base" ></div>
+    <div class="justify-content-center text-center pt-6">
+        <h1 class="text-secondary" >TODAS LAS SOLICITUDES </h1>
+    </div>
+
+
     <div th:if="${#lists.isEmpty(contracts)}">
         No hay contratos
-    </div>
+    </div >
+    <div class="formulario">
     <table th:unless="${#lists.isEmpty(contracts)}"  class="table table-striped">
         <thead>
         <tr>
@@ -43,6 +48,7 @@
         </tr>
         </tbody>
     </table>
+    </div >
     <a href="add" class="btn btn-success" role="button">Añade contrato</a>
     <a href="/user/list" class="btn btn-success" role="button">Volver a inicio</a>
 </div>

@@ -81,6 +81,38 @@ public class ContractDao {
     }
 
 
+    public Contract getContractData() {
+        String sql = "SELECT DNI FROM request WHERE number = (SELECT MAX(number) from request) ";
+        String sql2 = "SELECT  MAX(cif) as cif FROM company WHERE servicetype = (SELECT servicetype from request where number = (SELECT MAX(number) from request) ) EXCEPT SELECT cif from contract";
+        String sql3 =  "SELECT MAX(number) as number FROM contract ";
+        Contract contract = new Contract();
+        Contract contractAux = new Contract();
+
+
+
+        try {
+            contract = jdbcTemplate.queryForObject(sql3, new Object[]{}, new ContractRowMapperNumber());
+            long numero = Long.parseLong(contract.getNumber()) + 1;
+            String numeroAux = numero+"";
+            contractAux.setNumber(numeroAux);
+            contract = jdbcTemplate.queryForObject(sql2, new Object[]{}, new ContractRowMapperCif());
+            contractAux.setCif(contract.getCif());
+            contract = jdbcTemplate.queryForObject(sql, new Object[]{}, new ContractRowMapperDni());
+            contractAux.setDni(contract.getDni());
+            return contractAux;
+
+        }
+        catch(EmptyResultDataAccessException e) {
+            return null;
+        }
+    }
+
+
+
+
+
+
+
     public List<Contract> getContracts() {
         String sql = "SELECT * FROM contract";
         try {

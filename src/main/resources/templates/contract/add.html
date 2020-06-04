@@ -6,33 +6,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
 </head>
-<body>
+<body class="align-items-center justify-content-center">
 <h2>Nuevo contrato</h2>
-<form action="#" th:action="@{/contract/add}"
+<form action="#" th:action="@{/contract/add}"  class="col-sm-5 formulario"
+
       th:object="${contract}" method="post">
     <table>
+
         <tr>
             <td><label>Numero de contrato:</label></td>
-            <td><input type="text" class="form-control" id="number" th:field="*{number}" placeholder="Numero de contrato" /></td>
-                <td th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="error"></td>
+            <td><input type="text" th:field="*{number}" readonly/></td>
+        </tr>
 
 
+        <tr>
+            <td><label>Numero de CIF:</label></td>
+            <td><input type="text" th:field="*{cif}" readonly/></td>
         </tr>
 
         <tr>
-            <td><label>CIF:</label></td>
-            <td><input type="text" class="form-control" id="cif" th:field="*{cif}" placeholder="Numero de contrato" /></td>
-            <td th:if="${#fields.hasErrors('cif')}" th:errors="*{cif}" class="error"></td>
-
-
-        </tr>
-
-        <tr>
-            <td><label>DNI:</label></td>
-            <td><input type="text" class="form-control" id="dni" th:field="*{dni}" placeholder="DNI" /></td>
-            <td th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}" class="error"></td>
-
-
+            <td><label>Numero de DNI:</label></td>
+            <td><input type="text" th:field="*{dni}" readonly/></td>
         </tr>
 
         <tr>
@@ -69,6 +63,7 @@
             <td colspan="2"><input type="submit" value="Añade contrato" /></td>
         </tr>
     </table>
+
 </form>
 </body>
 </html>

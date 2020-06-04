@@ -45,8 +45,8 @@
             <td th:if="${#fields.hasErrors('comments')}" th:errors="*{comments}" class="error"></td>
         </tr>
         <tr>
-            <td colspan="2"><input th:href="@{/request/update/{number}/(number=${request.number})}" type="submit" class="btn btn-info" value="Resolver solicitud" /></td>
 
+            <td colspan="2"><input type="submit" href="/contract/add" th:href="@{/contract/add}" class="btn btn-info" value="Resolver Solicitud" /></td>
         </tr>
     </table>
 </form>

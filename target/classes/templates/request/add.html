@@ -11,10 +11,10 @@
 <form action="#" th:action="@{/request/add}" class="col-sm-5 formulario"
       th:object="${request}" method="post">
     <table>
+
         <tr>
             <td><label>Numero de solicitud:</label></td>
-            <td><input type="text" class="form-control" id="number" th:field="*{number}" placeholder="max. 20 caracters" /></td>
-            <td th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="error"></td>
+            <td><input type="text" th:field="*{number}" readonly/></td>
         </tr>
 
         <tr>

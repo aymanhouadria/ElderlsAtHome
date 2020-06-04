@@ -12,7 +12,7 @@ import Elderly.People.Project.dao.UserDao;
 
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("user")
 public class UserController {
     private UserDao userDao;
 

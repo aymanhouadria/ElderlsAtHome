@@ -38,7 +38,7 @@ public class ContractController {
 
     @RequestMapping(value="/add")
     public String addContract(Model model) {
-        model.addAttribute("contract", new Contract());
+        model.addAttribute("contract", contractDao.getContractData());
         return "contract/add";
     }
 
