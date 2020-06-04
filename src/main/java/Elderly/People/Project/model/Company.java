@@ -8,9 +8,37 @@ public class Company {
     private String CPName;
     private String CPPhoneNumber;
     private String CPPersonEmail;
+    private String ServiceType;
+    private String userc;
+    private String password;
+
 
 
     public Company() { }
+
+    public String getServiceType() {
+        return ServiceType;
+    }
+
+    public void setServiceType(String serviceType) {
+        ServiceType = serviceType;
+    }
+
+    public String getUserc() {
+        return userc;
+    }
+
+    public void setUserc(String userc) {
+        this.userc = userc;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getCIF() {
         return CIF;
@@ -60,15 +88,19 @@ public class Company {
         this.CPPersonEmail = CPPersonEmail;
     }
 
+
     @Override
     public String toString() {
         return "Company{" +
-                "CIF='" + CIF + "\'" +
-                ", name='" + name + "\'" +
-                ", address='" + address + "\'" +
-                ", CPName=" + CPName + "\'" +
-                ", CPPhoneNumber='" + CPPhoneNumber + "\'" +
-                ", CPPersonEmail='" + CPPersonEmail + "\'" +
-                "}";
+                "CIF='" + CIF + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", CPName='" + CPName + '\'' +
+                ", CPPhoneNumber='" + CPPhoneNumber + '\'' +
+                ", CPPersonEmail='" + CPPersonEmail + '\'' +
+                ", ServiceType='" + ServiceType + '\'' +
+                ", userc='" + userc + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

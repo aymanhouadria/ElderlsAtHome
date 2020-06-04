@@ -13,16 +13,28 @@
     <table>
         <tr>
             <td><label>Numero de contrato:</label></td>
-            <td><input type="text" class="form-control" id="number" th:field="*{number}" placeholder="max. 20 caracters" /></td>
-            <td th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="error"></td>
+            <td><input type="text" class="form-control" id="number" th:field="*{number}" placeholder="Numero de contrato" /></td>
+                <td th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="error"></td>
+
+
         </tr>
-        <!---
+
         <tr>
-            <td><label>Empresa asociada</label></td>
-            <td><input type="text" class="form-control" id="name" th:field="${company.CIF}" placeholder="CIF de empresa" /></td>
-            <td th:if="${#fields.hasErrors('CIF')}" th:errors="${company.CIF}" class="error"></td>
+            <td><label>CIF:</label></td>
+            <td><input type="text" class="form-control" id="cif" th:field="*{cif}" placeholder="Numero de contrato" /></td>
+            <td th:if="${#fields.hasErrors('cif')}" th:errors="*{cif}" class="error"></td>
+
+
         </tr>
-        --->
+
+        <tr>
+            <td><label>DNI:</label></td>
+            <td><input type="text" class="form-control" id="dni" th:field="*{dni}" placeholder="DNI" /></td>
+            <td th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}" class="error"></td>
+
+
+        </tr>
+
         <tr>
             <td><label>Fecha de inicio:</label></td>
             <td><input type="text" class="form-control" id="dateBeginning" th:field="*{dateBeginning}" placeholder="MM/dd/yyyy" /></td>

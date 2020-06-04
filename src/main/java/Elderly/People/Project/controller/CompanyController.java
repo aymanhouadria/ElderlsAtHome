@@ -33,6 +33,14 @@ public class CompanyController {
         return "company/list";
     }
 
+
+    @RequestMapping("/listElderly")
+    public String listCompaniesElderly(Model model) {
+        model.addAttribute("companiesService", companyDao.getCompaniesElderly());
+        return "company/listElderly";
+    }
+
+
     @RequestMapping(value="/add")
     public String addCompany(Model model) {
         model.addAttribute("company", new Company());
@@ -49,7 +57,7 @@ public class CompanyController {
         try {
             companyDao.addCompany(company);
         } catch (DuplicateKeyException ex) {
-            throw new ElderlyPeopleException("Clave duplicada, con CIF:" + company.getName() + ", y nombre: " + company.getName(), "CPDuplicada");
+            throw new ElderlyPeopleException("Clave duplicada, con CIF:" + company.getCIF() , "CPDuplicada");
         }
 
         return "redirect:list";

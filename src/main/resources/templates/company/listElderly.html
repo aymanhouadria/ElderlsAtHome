@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/base}">
+<head>
+    <title>Gestionar compañías</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
+</head>
+<body class="align-items-center justify-content-center">
+<div th:replace="fragments/navElderly" ></div>
+<div th:replace="fragments/logininfo" ></div>
+<div class="container">
+
+
+    <div class="justify-content-center text-center pt-6">
+        <h1 class="text-secondary" >PÁGINA PRINCIPAL</h1>
+    </div>
+    <div th:if="${#lists.isEmpty(companiesService)}">
+        No hay compañías
+    </div>
+    <div class="formulario text-center">
+        <table th:unless="${#lists.isEmpty(companiesService)}"  class="table table-striped ">
+            <thead>
+            <tr>
+
+                <th class="text-light">Tipo de servicio</th>
+
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="company: ${companiesService}">
+
+                <td th:text="${company.serviceType}"></td>
+                <td> <a href="/request/add" th:href="@{/request/add}" class="btn btn-warning" role="button">Solicitar</a></td>
+
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>
+</body>
+</html>

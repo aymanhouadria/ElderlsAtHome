@@ -23,14 +23,17 @@ public class CompanyDao {
 
 
     public void addCompany(Company company) {
-        String sql = "INSERT INTO company (CIF, name, address, CPName, CPPhoneNumber, CPPersonEmail) values (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO company (CIF, name, address, CPName, CPPhoneNumber, CPPersonEmail, userc, password, servicetype) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 company.getCIF(),
                 company.getName(),
                 company.getAddress(),
                 company.getCPName(),
                 company.getCPPhoneNumber(),
-                company.getCPPersonEmail()
+                company.getCPPersonEmail(),
+                company.getUserc(),
+                company.getPassword(),
+                company.getServiceType()
         );
     }
 
@@ -39,13 +42,16 @@ public class CompanyDao {
     }
 
     public void updateCompany(Company company) {
-        String sql = "UPDATE company SET name = ?, address = ?, CPName = ?, CPPhoneNumber = ?, CPPersonEmail = ? WHERE cif = ?";
+        String sql = "UPDATE company SET name = ?, address = ?, CPName = ?, CPPhoneNumber = ?, CPPersonEmail = ?, userc = ?, password = ?, servicetype = ? WHERE cif = ?";
         this.jdbcTemplate.update(sql,
                 company.getName(),
                 company.getAddress(),
                 company.getCPName(),
                 company.getCPPhoneNumber(),
                 company.getCPPersonEmail(),
+                company.getUserc(),
+                company.getPassword(),
+                company.getServiceType(),
                 company.getCIF()
         );
     }
@@ -66,6 +72,20 @@ public class CompanyDao {
         String sql = "SELECT * FROM Company";
         try {
             List<Company> companies = jdbcTemplate.query(sql, new CompanyRowMapper());
+            return companies;
+        }
+        catch(EmptyResultDataAccessException e) {
+            return new ArrayList<Company>();
+        }
+    }
+
+
+
+
+    public List<Company> getCompaniesElderly() {
+        String sql = "SELECT DISTINCT servicetype FROM Company WHERE servicetype IS NOT NULL";
+        try {
+            List<Company> companies = jdbcTemplate.query(sql, new CompanyRowMapperElderly());
             return companies;
         }
         catch(EmptyResultDataAccessException e) {

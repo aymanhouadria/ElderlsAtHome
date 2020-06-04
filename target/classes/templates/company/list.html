@@ -26,6 +26,7 @@
                 <th>Dirección</th>
                 <th>Persona de contacto</th>
                 <th>Teléfono de contacto</th>
+                <th>Tipo de servicio</th>
                 <th>Correo electrónico</th>
                 <th></th>
                 <th></th>
@@ -37,6 +38,7 @@
                 <td th:text="${company.address}"></td>
                 <td th:text="${company.CPName}"></td>
                 <td th:text="${company.CPPhoneNumber}"></td>
+                <td th:text="${company.serviceType}"></td>
                 <td th:text="${company.CPPersonEmail}"></td>
                 <td> <a th:href="@{/company/update/{cif}/(cif=${company.CIF})}" class="btn btn-warning" role="button">Edita compañía</a></td>
                 <td> <a th:href="@{/company/delete/{cif}/(cif=${company.CIF})}" class="btn btn-danger" role="button">Borrar compañía</a></td>

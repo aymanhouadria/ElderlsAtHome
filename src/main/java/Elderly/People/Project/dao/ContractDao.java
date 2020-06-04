@@ -24,7 +24,7 @@ public class ContractDao {
 
 
     public void addContract(/*Company company, */Contract contract) {
-        String sql = "INSERT INTO contract (number, dateBeginning, dateEnding, description, quantityServices, unitsOfMeasure, priceUnit) values (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO contract (number, dateBeginning, dateEnding, description, quantityServices, unitsOfMeasure, priceUnit, dni, cif) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 contract.getNumber(),
                 contract.getDateBeginning(),
@@ -32,7 +32,9 @@ public class ContractDao {
                 contract.getDescription(),
                 contract.getQuantityServices(),
                 contract.getUnitsOfMeasure(),
-                contract.getPriceUnit()
+                contract.getPriceUnit(),
+                contract.getDni(),
+                contract.getCif()
         );
 /*
         sql = "INSERT INTO signs (numberc, name) values (?, ?)";
@@ -52,7 +54,7 @@ public class ContractDao {
 
 
     public void updateContract(Contract contract) {
-        String sql = "UPDATE contract SET dateBeginning = ?, dateEnding = ?, description = ?, quantityServices = ?, unitsOfMeasure = ?, priceUnit = ? WHERE number = ?";
+        String sql = "UPDATE contract SET dateBeginning = ?, dateEnding = ?, description = ?, quantityServices = ?, unitsOfMeasure = ?, priceUnit = ?, cif = ?, dni = ? WHERE number = ?";
         this.jdbcTemplate.update(sql,
                 contract.getDateBeginning(),
                 contract.getDateEnding(),
@@ -60,7 +62,10 @@ public class ContractDao {
                 contract.getQuantityServices(),
                 contract.getUnitsOfMeasure(),
                 contract.getPriceUnit(),
+                contract.getCif(),
+                contract.getDni(),
                 contract.getNumber()
+
         );
     }
 

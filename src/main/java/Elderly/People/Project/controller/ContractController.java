@@ -53,9 +53,11 @@ public class ContractController {
             contractDao.addContract(/*company, */contract);
         } catch (DuplicateKeyException ex) {
             throw new ElderlyPeopleException("Clave duplicada, con numero de contrato:" + contract.getNumber(), "CPDuplicada");
-        } /*catch (Exception ex) {
-            throw new ElderlyPeopleException("Error creando el contrato. Posiblemente no se haya introducido el CIF de la empresa", "NullCIF");
-        }*/
+        }
+
+        catch (Exception ex) {
+            throw new ElderlyPeopleException("El CIF  "+ contract.getCif()+ "  NO PERTENECE A NINNGUNA COMPAÑÍA, PRIMERO SE DEBE REGISTRAR ", "Compañía no encontrada");
+        }
 
         return "redirect:list";
     }

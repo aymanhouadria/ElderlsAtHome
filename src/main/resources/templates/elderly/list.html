@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/base}">
+<head>
+    <title>Servicios para mayores</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
+</head>
+<body>
+<div class="container">
+
+    <div th:replace="fragments/base" ></div>
+    <div class="justify-content-center text-center pt-6">
+        <h1 class="text-secondary" >PAGINA PRINCIPAL</h1>
+    </div>
+
+    <div class="formulario">
+        <div th:if="${#lists.isEmpty(requests)}">
+            No hay solicitudes
+        </div>
+        <table th:unless="${#lists.isEmpty(requests)}"  class="table table-striped">
+            <thead>
+            <tr>
+                <th>Numero de solicitud</th>
+                <th>DNI del demandante</th>
+                <th>Tipo de servicio</th>
+                <th>Fecha de creación</th>
+                <th>Comentarios</th>
+
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="request: ${requests}">
+                <td th:text="${request.number}"></td>
+                <td th:text="${request.DNI}"></td>
+
+                <td th:text="${request.creationDate}"></td>
+
+
+                <td th:text="${request.comments}"></td>
+
+                <td> <a th:href="@{/request/update/{number}/(number=${request.number})}" class="btn btn-warning" role="button">Aprovar solicitud</a></td>
+                <td> <a th:href="@{/request/delete/{number}/(number=${request.number})}" class="btn btn-danger" role="button">Rechazar solicitud</a></td>
+
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+</div>
+</body>
+</html>

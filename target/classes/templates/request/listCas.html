@@ -43,12 +43,13 @@
 
                 <td th:text="${request.comments}"></td>
 
-                <td> <a th:href="@{/request/update/{number}/(number=${request.number})}" class="btn btn-warning" role="button">Edita solicitud</a></td>
+                <td> <a th:href="@{/request/update/{number}/(number=${request.number})}" class="btn btn-warning" role="button">Aprovar solicitud</a></td>
+                <td> <a th:href="@{/request/delete/{number}/(number=${request.number})}" class="btn btn-danger" role="button">Rechazar solicitud</a></td>
 
             </tr>
             </tbody>
         </table>
-        <a href="add" class="btn btn-success" role="button">Añade solicitud</a>
+
 
     </div>
 

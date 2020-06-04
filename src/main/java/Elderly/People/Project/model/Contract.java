@@ -15,8 +15,26 @@ public class Contract {
     private String quantityServices;
     private String unitsOfMeasure;
     private String priceUnit;
-
+    private String cif;
+    private String dni;
     public Contract() {
+    }
+
+
+    public String getCif() {
+        return cif;
+    }
+
+    public void setCif(String cif) {
+        this.cif = cif;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public String getNumber() {
@@ -75,18 +93,19 @@ public class Contract {
         this.priceUnit = priceUnit;
     }
 
+
     @Override
     public String toString() {
         return "Contract{" +
-                "number='" + number + "\'" +
-                ", dateBeginning='" + dateBeginning + "\'" +
-                ", dateEnding='" + dateEnding + "\'" +
-                ", description=" + description + "\'" +
-                ", quantityServices='" + quantityServices + "\'" +
-                ", unitsOfMeasure='" + unitsOfMeasure + "\'" +
-                ", priceUnit='" + priceUnit + "\'" +
-                "}";
+                "number='" + number + '\'' +
+                ", dateBeginning=" + dateBeginning +
+                ", dateEnding=" + dateEnding +
+                ", description='" + description + '\'' +
+                ", quantityServices='" + quantityServices + '\'' +
+                ", unitsOfMeasure='" + unitsOfMeasure + '\'' +
+                ", priceUnit='" + priceUnit + '\'' +
+                ", cif='" + cif + '\'' +
+                ", dni='" + dni + '\'' +
+                '}';
     }
-
-
 }
