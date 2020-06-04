@@ -6,7 +6,6 @@ import java.util.Date;
 public class Request {
     private String number;
     private String DNI;
-    private String numberc;
     private String serviceType;
     private Date creationDate;
     private String state;
@@ -31,13 +30,7 @@ public class Request {
 
     public void setDNI(String DNI) { this.DNI = DNI; }
 
-    public String getNumberc() {
-        return numberc;
-    }
 
-    public void setNumberc(String numberc) {
-        this.numberc = numberc;
-    }
 
     public String getServiceType() {
         return serviceType;
@@ -98,7 +91,7 @@ public class Request {
         return "Request{" +
                 "number='" + number + '\'' +
                 ", DNI='" + DNI + '\'' +
-                ", numberc='" + numberc + '\'' +
+
                 ", serviceType='" + serviceType + '\'' +
                 ", creationDate=" + creationDate +
                 ", state='" + state + '\'' +

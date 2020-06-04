@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c06654-8a48-4ced-99f7-890c4ff17531" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ElderlyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/ElderlyValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/SocialWorkerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/SocialWorkerValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/SocialWorkerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/SocialWorkerRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/SocialWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/elderly/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/elderly/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/invoice/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/invoice/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/socialworker/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/socialworker/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/socialworker/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/volunteer/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/volunteer/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/ElderlyPeopleRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/VolunteerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/VolunteerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/ElderlyPeople.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/ElderlyPeople.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/RequestValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/controller/RequestValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/dao/RequestRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/request/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/request/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/request/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/request/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/request/listCas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/request/listCas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/request/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/request/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/ContractValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/InvoiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/InvoiceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/VolunteerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/controller/VolunteerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/ElderlyPeopleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/ElderlyPeopleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/ElderlyPeopleRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/ElderlyPeopleRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/InvoiceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/InvoiceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/InvoiceRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/InvoiceRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/VolunteerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/VolunteerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/VolunteerRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/dao/VolunteerRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/model/ElderlyPeople.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/model/ElderlyPeople.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Elderly/People/Project/model/Invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Elderly/People/Project/model/Invoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/request/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/request/add.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -54,6 +72,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/request" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -61,11 +85,11 @@
     <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\USUARIO\IdeaProjects\ElderlsAtHome\src\main\resources\static\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\USUARIO\IdeaProjects\ElderlsAtHome\src\main\resources\templates\request" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USUARIO\IdeaProjects\ElderlsAtHome\src\main\resources\static\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,7 +137,8 @@
       <workItem from="1590755949642" duration="1305000" />
       <workItem from="1590830391914" duration="1183000" />
       <workItem from="1590953281437" duration="1933000" />
-      <workItem from="1591179062678" duration="29817000" />
+      <workItem from="1591179062678" duration="36014000" />
+      <workItem from="1591263772426" duration="7238000" />
     </task>
     <task id="LOCAL-00001" summary="Diseño orientativo de la pagina de inicio.">
       <created>1590555532533</created>
@@ -157,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591193623606</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Creación de socialWorkerController y ElderlyController">
+      <created>1591212902001</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591212902001</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +202,8 @@
     <MESSAGE value="creacion de l requestController, RequestValidator, y sus vistas. Cambio en el direccionamiento de la pagina principal del UserCas. Cambio visual en las vistas de listados" />
     <MESSAGE value="creacion del invoice controller y su validador" />
     <MESSAGE value="creacion del controlador de volunteer y su validador" />
-    <option name="LAST_COMMIT_MESSAGE" value="creacion del controlador de volunteer y su validador" />
+    <MESSAGE value="Creación de socialWorkerController y ElderlyController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación de socialWorkerController y ElderlyController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Project_Structure" timestamp="1583841535126">
@@ -195,10 +228,10 @@
     </state>
     <state x="-1265" y="461" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591182149700" />
     <state x="466" y="232" width="433" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1590287518140" />
-    <state x="-1350" y="218" key="CommitChangelistDialog2" timestamp="1591193619175">
+    <state x="-1350" y="218" key="CommitChangelistDialog2" timestamp="1591212896799">
       <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state x="-1350" y="218" key="CommitChangelistDialog2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591193619175" />
+    <state x="-1350" y="218" key="CommitChangelistDialog2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591212896799" />
     <state x="290" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590638876618" />
     <state x="290" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590555526765" />
     <state x="96" y="87" key="DiffContextDialog" timestamp="1590555624857">
@@ -223,31 +256,31 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590165371612" />
-    <state width="1323" height="11" key="GridCell.Tab.0.bottom" timestamp="1590968694569">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="99" key="GridCell.Tab.0.bottom" timestamp="1591271919393">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590757318098" />
+    <state width="1877" height="99" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591271919393" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="11" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590968694569" />
     <state width="1877" height="216" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1323" height="11" key="GridCell.Tab.0.center" timestamp="1590968694569">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="99" key="GridCell.Tab.0.center" timestamp="1591271919393">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.center/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590757318098" />
+    <state width="1877" height="99" key="GridCell.Tab.0.center/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591271919393" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="11" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590968694569" />
     <state width="1877" height="216" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1323" height="11" key="GridCell.Tab.0.left" timestamp="1590968694569">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="99" key="GridCell.Tab.0.left" timestamp="1591271919393">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.left/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590757318098" />
+    <state width="1877" height="99" key="GridCell.Tab.0.left/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591271919393" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="11" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590968694569" />
     <state width="1877" height="216" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
-    <state width="1323" height="11" key="GridCell.Tab.0.right" timestamp="1590968694569">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="99" key="GridCell.Tab.0.right" timestamp="1591271919393">
+      <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state width="1877" height="174" key="GridCell.Tab.0.right/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1590757318098" />
+    <state width="1877" height="99" key="GridCell.Tab.0.right/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591271919393" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590736698685" />
     <state width="1323" height="11" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590968694569" />
     <state width="1877" height="216" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588884586231" />
@@ -260,10 +293,10 @@
     </state>
     <state x="93" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590556288725" />
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583841839932" />
-    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2" timestamp="1591193649464">
+    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2" timestamp="1591212912791">
       <screen x="-1920" y="130" width="1920" height="1040" />
     </state>
-    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591193649464" />
+    <state x="-1533" y="269" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591212912791" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1920.130.1920.1040@0.0.1366.728" timestamp="1590639109570" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590556309453" />
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1589988837385">
@@ -273,10 +306,25 @@
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588430895055" />
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589988837385" />
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog/1920.-1.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1584706040543" />
+    <state x="-1151" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591263843965">
+      <screen x="-1920" y="130" width="1920" height="1040" />
+    </state>
+    <state x="-1151" y="564" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/-1920.130.1920.1040@-1920.130.1920.1040" timestamp="1591263843965" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588624696446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588624696446" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Elderly/People/Project/model/Contract.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ElderlsAtHome$add_html.dat" NAME="add.html Coverage Results" MODIFIED="1588675882243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

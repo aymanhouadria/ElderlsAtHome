@@ -22,11 +22,11 @@ public class RequestDao {
     }
 
     public void addRequest(Request request) {
-        String sql = "insert into request (number, DNI, numberc, servicetype, creationdate, state, approveddate, rejecteddate, comments, enddate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "insert into request (number, DNI,  servicetype, creationdate, state, approveddate, rejecteddate, comments, enddate) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 request.getNumber(),
                 request.getDNI(),
-                request.getNumberc(),
+
                 request.getServiceType(),
                 request.getCreationDate(),
                 request.getState(),

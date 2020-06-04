@@ -23,10 +23,7 @@ public class RequestValidator implements Validator {
             errors.rejectValue("number", "tooLongString","Numero demasiado largo");
         if (request.getDNI().length() > 10)
             errors.rejectValue("number", "tooLongString","DNI demasiado largo");
-        if (request.getApprovedDate() != null && request.getCreationDate() != null) {
-            if (request.getApprovedDate().after(request.getCreationDate()))
-                errors.rejectValue("approvedDate", "dateError", "La fecha de creacion no puede ser posterior a la de aprovacion");
-        }
+
 
         if (request.getServiceType() != null && request.getServiceType().length() > 20)
             errors.rejectValue("Tiposervicio", "tooLongString","La longitud excede el maximo");

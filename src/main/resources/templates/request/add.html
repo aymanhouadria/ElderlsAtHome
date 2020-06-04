@@ -22,11 +22,6 @@
             <td><input type="text" class="form-control" id="DNI" th:field="*{DNI}" placeholder="max. 20 caracters" /></td>
             <td th:if="${#fields.hasErrors('DNI')}" th:errors="*{DNI}" class="error"></td>
         </tr>
-        <tr>
-            <td><label>Numero de contrato:</label></td>
-            <td><input type="text" class="form-control" id="numberc" th:field="*{numberc}" placeholder="max. 20 caracters" /></td>
-            <td th:if="${#fields.hasErrors('numberc')}" th:errors="*{numberc}" class="error"></td>
-        </tr>
 
         <tr>
             <td><label>Tipo de Servicio:</label></td>
@@ -40,21 +35,7 @@
             <td th:if="${#fields.hasErrors('creationDate')}" th:errors="*{creationDate}" class="error"></td>
         </tr>
 
-        <tr>
-            <td><label>Estado:</label></td>
-            <td><input type="text" class="form-control" id="state" th:field="*{state}" placeholder="max. 20 caracters" /></td>
-            <td th:if="${#fields.hasErrors('state')}" th:errors="*{state}" class="error"></td>
-        </tr>
-        <tr>
-            <td><label>Fecha de aprovación:</label></td>
-            <td><input type="text" class="form-control" id="approvedDate" th:field="*{approvedDate}" placeholder="MM/dd/yyyy" /></td>
-            <td th:if="${#fields.hasErrors('approvedDate')}" th:errors="*{approvedDate}" class="error"></td>
-        </tr>
-        <tr>
-            <td><label>Fecha de rechazo:</label></td>
-            <td><input type="text" class="form-control" id="rejectedDate" th:field="*{rejectedDate}" placeholder="MM/dd/yyyy" /></td>
-            <td th:if="${#fields.hasErrors('rejectedDate')}" th:errors="*{rejectedDate}" class="error"></td>
-        </tr>
+
         <tr>
             <td><label>Comentarios:</label></td>
             <td><input type="text" class="form-control" id="comments" th:field="*{comments}" placeholder="max. 100 caracteres"/></td>

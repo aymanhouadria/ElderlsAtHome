@@ -28,8 +28,8 @@
                 <th>Fecha de creación</th>
                 <th>Estado</th>
                 <th>Fecha de aprobación</th>
-                <th>Fecha de rechazo</th>
                 <th>Comentarios</th>
+
 
                 <th></th>
                 <th></th>
@@ -44,6 +44,7 @@
                 <td th:text="${request.state}"></td>
                 <td th:text="${request.approvedDate}"></td>
                 <td th:text="${request.comments}"></td>
+
 
                 <td> <a th:href="@{/request/update/{number}/(number=${request.number})}" class="btn btn-warning" role="button">Edita solicitud</a></td>
                 <td> <a th:href="@{/request/delete/{number}/(number=${request.number})}" class="btn btn-danger" role="button">Borrar solicitud</a></td>
