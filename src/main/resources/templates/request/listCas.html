@@ -34,17 +34,18 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="request: ${requests}">
+            <tr class="text-light" th:each="request: ${requests}">
                 <td th:text="${request.number}"></td>
                 <td th:text="${request.DNI}"></td>
+                <td th:text="${request.serviceType}"></td>
 
                 <td th:text="${request.creationDate}"></td>
 
 
                 <td th:text="${request.comments}"></td>
 
-                <td> <a th:href="@{/request/update/{number}/(number=${request.number})}" class="btn btn-warning" role="button">Aprovar solicitud</a></td>
-                <td> <a th:href="@{/request/delete/{number}/(number=${request.number})}" class="btn btn-danger" role="button">Rechazar solicitud</a></td>
+                <td> <a th:href="@{/request/update/{number}/(number=${request.number})}" class="btn btn-warning" role="button">Resolver solicitud</a></td>
+                <td> <a th:href="@{/request/delete/{number}/(number=${request.number})}" class="btn btn-danger" role="button">Borrar solicitud</a></td>
 
             </tr>
             </tbody>

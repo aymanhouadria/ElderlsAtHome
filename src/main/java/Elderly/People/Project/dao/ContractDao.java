@@ -83,7 +83,7 @@ public class ContractDao {
 
     public Contract getContractData() {
         String sql = "SELECT DNI FROM request WHERE number = (SELECT MAX(number) from request) ";
-        String sql2 = "SELECT  MAX(cif) as cif FROM company WHERE servicetype = (SELECT servicetype from request where number = (SELECT MAX(number) from request) ) EXCEPT SELECT cif from contract";
+        String sql2 = "SELECT  MAX(cif) as cif FROM company WHERE servicetype = (SELECT servicetype from request where number = (SELECT MAX(number) from request) ) and cif NOT IN (SELECT cif from contract) and cif IS NOT NULL;";
         String sql3 =  "SELECT MAX(number) as number FROM contract ";
         Contract contract = new Contract();
         Contract contractAux = new Contract();

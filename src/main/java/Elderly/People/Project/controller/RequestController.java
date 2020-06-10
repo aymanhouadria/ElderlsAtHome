@@ -1,5 +1,6 @@
 package Elderly.People.Project.controller;
 
+import Elderly.People.Project.dao.CompanyDao;
 import Elderly.People.Project.dao.RequestDao;
 import Elderly.People.Project.model.Request;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +23,15 @@ import java.util.NoSuchElementException;
 public class RequestController {
 
     private RequestDao requestDao;
+    private CompanyDao companyDao;
 
     @Autowired
     public void setRequestDao(RequestDao requestDao) {
         this.requestDao = requestDao;
+    }
+    @Autowired
+    public void setCompanyDao(CompanyDao companyDao) {
+        this.companyDao = companyDao;
     }
 
     @RequestMapping("/list")
@@ -42,7 +48,10 @@ public class RequestController {
 
     @RequestMapping(value="/add")
     public String addContract(Model model) {
+
         model.addAttribute("request", requestDao.getRequest());
+        model.addAttribute("service", companyDao.getCompaniesElderly());
+
         return "request/add";
     }
 
@@ -58,8 +67,11 @@ public class RequestController {
         } catch (DuplicateKeyException ex) {
             throw new ElderlyPeopleException("Clave duplicada, con numero de petición:" + request.getNumber(), "CPDuplicada");
         }
+        catch (Exception ex) {
+            throw new ElderlyPeopleException("El DNI:  "+ request.getDNI()+ "  NO EXISTE ", "DniNull");
+        }
 
-        return "redirect:list";
+        return "redirect:../company/listElderly";
     }
 
     @RequestMapping(value="/update/{number}", method = RequestMethod.GET)

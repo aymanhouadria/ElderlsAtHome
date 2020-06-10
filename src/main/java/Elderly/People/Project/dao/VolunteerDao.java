@@ -22,7 +22,7 @@ public class VolunteerDao {
     }
 
     public void addVolunteer(Volunteer volunteer) {
-        String sql = "insert into volunteer (userv, pwd, address, name, phonenubmer, email, hobbies, applicationdate, acceptationdate, accepted, birth_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "insert into volunteer (userv, pwd, address, name, phonenumber, email, hobbies, applicationdate, acceptationdate, accepted, birthdate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 volunteer.getUser(),
                 volunteer.getPwd(),
@@ -73,7 +73,20 @@ public class VolunteerDao {
 
 
    public List<Volunteer> getVolunteers() {
-        String sql = "SELECT * FROM volunteer";
+        String sql = "SELECT * FROM volunteer where accepted IS NULL";
+        try {
+            List<Volunteer> volunteers = jdbcTemplate.query(sql, new VolunteerRowMapper());
+            return volunteers;
+        }
+
+        catch(EmptyResultDataAccessException e) {
+            return new ArrayList<Volunteer>();
+        }
+    }
+
+
+    public List<Volunteer> getVolunteersElderly() {
+        String sql = "SELECT * FROM volunteer where accepted = 'True'";
         try {
             List<Volunteer> volunteers = jdbcTemplate.query(sql, new VolunteerRowMapper());
             return volunteers;

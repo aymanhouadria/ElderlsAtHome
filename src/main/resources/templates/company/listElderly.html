@@ -15,32 +15,35 @@
 
 
     <div class="justify-content-center text-center pt-6">
-        <h1 class="text-secondary" >PÁGINA PRINCIPAL</h1>
+        <h1 class="text-dark" >PÁGINA PRINCIPAL</h1>
     </div>
     <div th:if="${#lists.isEmpty(companiesService)}">
         No hay compañías
     </div>
-    <div class="formulario text-center">
-        <table th:unless="${#lists.isEmpty(companiesService)}"  class="table table-striped ">
-            <thead>
-            <tr>
+    <div  class="row  justify-content-center pt-5 mt-5 mr-1">
+        <div class="col-md-5 formulario ">
+            <table th:unless="${#lists.isEmpty(companiesService)}"  class="table table-striped ">
+                <thead>
+                <tr>
 
-                <th class="text-light">Tipo de servicio</th>
+                    <th class="text-white">Tipo de servicio</th>
 
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="company: ${companiesService}">
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="company: ${companiesService}">
 
-                <td class=" text-light" th:text="${company.serviceType}"></td>
-                <td> <a href="/request/add" th:href="@{/request/add}" class="btn btn-warning" role="button">Solicitar</a></td>
+                    <td class=" text-light" th:text="${company.serviceType}"></td>
 
 
-            </tr>
-            </tbody>
-        </table>
+
+                </tr>
+                </tbody>
+                <td> <a href="/request/add" th:href="@{/request/add}" class="btn btn-warning" role="button">SOLICITAR UN SERVICIO</a></td>
+            </table>
+        </div>
 
     </div>
 

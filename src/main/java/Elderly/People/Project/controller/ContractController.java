@@ -43,7 +43,7 @@ public class ContractController {
     }
 
     @RequestMapping(value="/add", method= RequestMethod.POST)
-    public String processAddSubmit(@ModelAttribute("contract") /*Company company, */Contract contract, BindingResult bindingResult) {
+    public String processAddSubmit(@ModelAttribute("contract") Contract contract, BindingResult bindingResult) {
         ContractValidator contractValidator = new ContractValidator();
         contractValidator.validate(contract, bindingResult);
         if (bindingResult.hasErrors())

@@ -10,25 +10,23 @@
 </head>
 <body>
 <div class="container">
-    <div th:replace="fragments/base" ></div>
+    <div th:replace="fragments/navElderly" ></div>
+    <div th:replace="fragments/logininfo" ></div>
 
 
     <div class="justify-content-center text-center pt-6">
         <h1 class="text-secondary" >TODAS LAS SOLICITUDES </h1>
     </div>
     <div th:if="${#lists.isEmpty(volunteer)}">
-        No hay solicitudes
+        No hay Voluntarios
     </div>
     <div class="formulario">
         <table th:unless="${#lists.isEmpty(volunteer)}"  class="table table-striped">
             <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Dirección</th>
-                <th>Fecha de nacimiento</th>
-                <th>Estado</th>
                 <th>Hobbies</th>
-                <th>Fecha de solicitud</th>
+
 
 
 
@@ -39,20 +37,17 @@
             <tbody>
             <tr class="text-light" th:each="volunteers: ${volunteer}">
                 <td th:text="${volunteers.name}"></td>
-                <td th:text="${volunteers.address}"></td>
-                <td th:text="${volunteers.birthDate}"></td>
-                <td th:text="${volunteers.accepted}"></td>
+
                 <td th:text="${volunteers.hobbies}"></td>
-                <td th:text="${volunteers.applicationDate}"></td>
 
 
-                <td> <a th:href="@{/volunteer/update/{user}/(user=${volunteers.user})}" class="btn btn-warning" role="button">Resolver solicitud</a></td>
-                <td> <a th:href="@{/volunteer/delete/{user}/(user=${volunteers.user})}" class="btn btn-danger" role="button">Borrar solicitud</a></td>
+
+                <td> <a th:href="@{/volunteer/update/{user}/(user=${volunteers.user})}" class="btn btn-warning" role="button">Reservar Voluntario</a></td>
+
             </tr>
             </tbody>
         </table>
-        <a href="add" class="btn btn-success" role="button">Añade solicitud</a>
-        <a href="/request/list" class="btn btn-success" role="button">Volver a inicio</a>
+
     </div>
 
 

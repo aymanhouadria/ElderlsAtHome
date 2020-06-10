@@ -33,6 +33,14 @@ public class VolunteerController {
         return "volunteer/list";
     }
 
+    @RequestMapping("/ListaVoluntarios")
+    public String listVolunteerElderly(Model model) {
+        model.addAttribute("volunteer", volunteerDao.getVolunteersElderly());
+        return "volunteer/ListaVolunarios";
+
+    }
+
+
     @RequestMapping(value="/add")
     public String addVolunteer(Model model) {
         model.addAttribute("volunteer", new Volunteer());
@@ -52,12 +60,12 @@ public class VolunteerController {
             throw new ElderlyPeopleException("Clave duplicada con numero de usuario:" + volunteer.getUser() , "CPDuplicada");
         }
 
-        return "redirect:list";
+        return "redirect:../";
     }
 
-    @RequestMapping(value="/update/{userv}", method = RequestMethod.GET)
-    public String editVolunteer(Model model, @PathVariable String userv) {
-        model.addAttribute("volunteer", volunteerDao.getVolunteer(userv));
+    @RequestMapping(value="/update/{user}", method = RequestMethod.GET)
+    public String editVolunteer(Model model, @PathVariable String user) {
+        model.addAttribute("volunteer", volunteerDao.getVolunteer(user));
         return "volunteer/update";
     }
 

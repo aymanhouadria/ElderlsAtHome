@@ -6,9 +6,10 @@
     <title>Gestionar contratos</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/ElderlyPeople.css" th:href="@{/css/ElderlyPeople.css}"/>
+    <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
+
 </head>
-<body>
+<body class="align-items-center justify-content-center">
 <div class="container">
     <div th:replace="fragments/base" ></div>
     <div class="justify-content-center text-center pt-6">
@@ -35,7 +36,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="contract: ${contracts}">
+        <tr class="text-light" th:each="contract: ${contracts}">
             <td th:text="${contract.number}"></td>
             <td th:text="${contract.dateBeginning}"></td>
             <td th:text="${contract.dateEnding}"></td>

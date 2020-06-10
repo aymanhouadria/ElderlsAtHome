@@ -7,10 +7,20 @@
     <link rel="stylesheet" type="text/css" href="/css/INDICE.css" th:href="@{/css/INDICE.css}"/>
 </head>
 <body class="align-items-center justify-content-center">
-<h2 class="pt-6">Crear solicitud</h2>
-<form action="#" th:action="@{/request/add}" class="col-sm-5 formulario"
+
+<div th:replace="fragments/navElderly" ></div>
+<div th:replace="fragments/logininfo" ></div>
+<h2 class="pt-6 text-light">REALIZAR SOLICITUD</h2>
+<div  class="row  justify-content-center pt-5 mt-5 mr-1">
+
+    <div class="col-md-5 formulario text-center">
+
+
+
+<form action="#" th:action="@{/request/add}" class="col-sm-5 "
       th:object="${request}" method="post">
-    <table>
+
+    <table class="text-light">
 
         <tr>
             <td><label>Numero de solicitud:</label></td>
@@ -19,14 +29,18 @@
 
         <tr>
             <td><label>DNI del solicitante:</label></td>
-            <td><input type="text" class="form-control" id="DNI" th:field="*{DNI}" placeholder="max. 20 caracters" /></td>
+            <td><input type="text" class="form-control" id="DNI" th:field="*{DNI}" placeholder="INTRODUZCA DNI" /></td>
             <td th:if="${#fields.hasErrors('DNI')}" th:errors="*{DNI}" class="error"></td>
         </tr>
 
-        <tr>
+        <tr >
             <td><label>Tipo de Servicio:</label></td>
-            <td><input type="text" class="form-control" id="serviceType" th:field="*{serviceType}" placeholder="max. 20 caracters" /></td>
-            <td th:if="${#fields.hasErrors('serviceType')}" th:errors="*{serviceType}" class="error"></td>
+            <td><select   th:field="*{serviceType}" name="menu">
+                <option value="..." selected>...</option>
+                <optgroup  label="S.Disponibles">
+                    <option th:each="services: ${service}" th:value="${services.serviceType}" th:text="${services.serviceType}"></option>
+                </optgroup>
+            </select></td>
         </tr>
 
         <tr>
@@ -43,9 +57,11 @@
         </tr>
 
         <tr>
-            <td colspan="2"><input type="submit" class="btn btn-info" value="Envía solicitud" /></td>
+            <td  colspan="2"><input type="submit" class="btn btn-info" value="Envía solicitud" /></td>
         </tr>
     </table>
 </form>
+    </div>
+</div>
 </body>
 </html>
