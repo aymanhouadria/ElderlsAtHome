@@ -10,14 +10,16 @@
 <div th:replace="fragments/base" ></div>
 
 
-<h2 class="pt-6 text-light">Resolución de Solicitud</h2>
+
 <div  class="row  justify-content-center pt-5 mt-5 mr-1">
+
 
     <div class="col-md-5 formulario ">
 
 
 <form action="#" th:action="@{/request/update} "
       th:object="${request}" method="post">
+    <h2 class="pt-6 text-light">Resolución de Solicitud</h2>
 
     <table class="text-light">
         <tr>
@@ -58,7 +60,7 @@
         </tr>
         <tr>
 
-            <td colspan="2"><input type="submit" th:href="@{/contract/add/{serviceType}/(serviceType=${request.serviceType})}" class="btn btn-info" value="Resolver Solicitud" /></td>
+            <td colspan="2"><input type="submit" href="/contract/add" th:href="@{/contract/add}" class="btn btn-info" value="Resolver Solicitud" /></td>
         </tr>
     </table>
 </form>
