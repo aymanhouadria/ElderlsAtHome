@@ -25,6 +25,7 @@ public class ContractController {
     private ContractDao contractDao;
 
 
+
     @Autowired
     public void setContractDao(ContractDao contractDao) {
         this.contractDao = contractDao;
@@ -59,7 +60,7 @@ public class ContractController {
             throw new ElderlyPeopleException("El CIF  "+ contract.getCif()+ "  NO PERTENECE A NINNGUNA COMPAÑÍA, PRIMERO SE DEBE REGISTRAR ", "Compañía no encontrada");
         }
 
-        return "redirect:list";
+        return "redirect:../request/listCas";
     }
 
     @RequestMapping(value="/update/{number}", method = RequestMethod.GET)

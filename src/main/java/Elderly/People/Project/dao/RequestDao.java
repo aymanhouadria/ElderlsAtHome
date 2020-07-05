@@ -15,6 +15,7 @@ import java.util.List;
 public class RequestDao {
 
     private JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate2;
 
 
     @Autowired
@@ -45,6 +46,17 @@ public class RequestDao {
 
     public void updateRequest(Request request) {
         String sql = "update request set  servicetype = ?, creationdate = ?, state = ?, approveddate = ?, rejecteddate = ?, comments = ?, enddate = ? WHERE number = ?";
+        String sql2 = "SELECT number from contract where cif = (SELECT max(cif) from company where servicetype = (SELECT servicetype from request WHERE number =(SELECT MAX(NUMBER) FROM REQUEST)) )";
+        String sql3 = "insert into firma (DNI, number_C, number_r) values (?, ?, ?)";
+
+        Contract contract = new Contract();
+
+
+
+
+
+
+
         this.jdbcTemplate.update(sql,
 
                 request.getServiceType(),
@@ -57,6 +69,17 @@ public class RequestDao {
                 request.getNumber()
 
         );
+
+        contract = this.jdbcTemplate.queryForObject(sql2, new Object[]{}, new ContractRowMapperNumber());
+
+        this.jdbcTemplate.update(sql3,
+                request.getDNI(),
+                contract.getNumber(),
+                request.getNumber()
+
+        );
+
+
     }
 
 

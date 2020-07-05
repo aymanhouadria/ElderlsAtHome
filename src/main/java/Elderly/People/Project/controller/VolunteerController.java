@@ -60,7 +60,7 @@ public class VolunteerController {
             throw new ElderlyPeopleException("Clave duplicada con numero de usuario:" + volunteer.getUser() , "CPDuplicada");
         }
 
-        return "redirect:../";
+        return "redirect:../availability/add";
     }
 
     @RequestMapping(value="/update/{user}", method = RequestMethod.GET)
@@ -89,6 +89,14 @@ public class VolunteerController {
     @RequestMapping(value="/delete/{userv}")
     public String processDelete(@PathVariable String userv) {
         volunteerDao.deleteVolunteer(userv);
+        return "redirect:../list";
+    }
+
+
+
+    @RequestMapping(value="/resolve/{userv}")
+    public String processResolve(@PathVariable String userv) {
+        volunteerDao.resolveVolunteer(userv);
         return "redirect:../list";
     }
 }

@@ -26,7 +26,6 @@
                 <th>Nombre</th>
                 <th>Dirección</th>
                 <th>Fecha de nacimiento</th>
-                <th>Estado</th>
                 <th>Hobbies</th>
                 <th>Fecha de solicitud</th>
 
@@ -41,12 +40,12 @@
                 <td th:text="${volunteers.name}"></td>
                 <td th:text="${volunteers.address}"></td>
                 <td th:text="${volunteers.birthDate}"></td>
-                <td th:text="${volunteers.accepted}"></td>
                 <td th:text="${volunteers.hobbies}"></td>
                 <td th:text="${volunteers.applicationDate}"></td>
 
 
-                <td> <a th:href="@{/volunteer/update/{user}/(user=${volunteers.user})}" class="btn btn-warning" role="button">Resolver solicitud</a></td>
+
+                <td> <a th:href="@{/volunteer/resolve/{user}/(user=${volunteers.user})}" class="btn btn-warning" role="button">resolver</a></td>
                 <td> <a th:href="@{/volunteer/delete/{user}/(user=${volunteers.user})}" class="btn btn-danger" role="button">Borrar solicitud</a></td>
             </tr>
             </tbody>

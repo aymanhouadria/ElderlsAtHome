@@ -91,10 +91,8 @@ public class RequestController {
             requestDao.updateRequest(request);
         } catch (DuplicateFormatFlagsException ex) {
             throw new ElderlyPeopleException("Clave duplicada, con numero de solicitud:" + request.getNumber(), "CPDuplicada");
-        } catch (DataAccessException ex) {
-            throw new ElderlyPeopleException("Error en l'accés a la base de dades", "ErrorAccedintDades");
         }
-        return "redirect:../contract/add";
+        return "redirect:../request/listCas";
     }
 
     @RequestMapping(value="/delete/{number}")

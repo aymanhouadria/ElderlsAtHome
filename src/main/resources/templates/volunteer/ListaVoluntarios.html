@@ -17,11 +17,11 @@
     <div class="justify-content-center text-center pt-6">
         <h1 class="text-secondary" >TODAS LAS SOLICITUDES </h1>
     </div>
-    <div th:if="${#lists.isEmpty(volunteer)}">
+    <div th:if="${#lists.isEmpty(volunteers)}">
         No hay Voluntarios
     </div>
     <div class="formulario">
-        <table th:unless="${#lists.isEmpty(volunteer)}"  class="table table-striped">
+        <table th:unless="${#lists.isEmpty(volunteers)}"  class="table table-striped">
             <thead>
             <tr>
                 <th>Nombre</th>

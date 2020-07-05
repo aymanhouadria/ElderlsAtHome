@@ -15,7 +15,8 @@
 <form action="#" th:action="@{/contract/add}"
 
       th:object="${contract}" method="post">
-    <table class="pt-3 text-light">
+    <table class="pt-3 text-light
+">
 
         <tr>
             <td><label>Numero de contrato:</label></td>
@@ -26,11 +27,6 @@
         <tr>
             <td><label>Numero de CIF:</label></td>
             <td><input type="text" th:field="*{cif}" readonly/></td>
-        </tr>
-
-        <tr>
-            <td><label>Numero de DNI:</label></td>
-            <td><input type="text" th:field="*{dni}" readonly/></td>
         </tr>
 
         <tr>

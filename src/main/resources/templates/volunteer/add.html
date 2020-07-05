@@ -69,11 +69,7 @@
                 </tr>
 
 
-                <tr>
-                    <td><label>Fecha actual:</label></td>
-                    <td><input type="text" class="form-control" id="applicationDate" th:field="*{applicationDate}" placeholder="MM/DD/AAAA"/></td>
-                    <td th:if="${#fields.hasErrors('applicationDate')}" th:errors="*{applicationDate}" class="error"></td>
-                </tr>
+
 
 
 
@@ -81,7 +77,7 @@
 
 
                 <tr>
-                    <td  colspan="2"><input type="submit" class="btn btn-info" value="Enviar solicitud de registro" /></td>
+                    <td  colspan="2"><input type="submit"  href="/availability/add" th:href="@{/availability/add}" class="btn btn-info" value="Enviar solicitud de registro" /></td>
                 </tr>
             </table>
         </form>

@@ -60,7 +60,7 @@ public class CompanyController {
             throw new ElderlyPeopleException("Clave duplicada, con CIF:" + company.getCIF() , "CPDuplicada");
         }
 
-        return "redirect:list";
+        return "redirect:../contract/add";
     }
 
     @RequestMapping(value="/update/{cif}", method = RequestMethod.GET)

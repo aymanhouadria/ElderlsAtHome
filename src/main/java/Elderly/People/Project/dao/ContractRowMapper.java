@@ -18,7 +18,7 @@ public final class ContractRowMapper implements RowMapper<Contract> {
         contract.setUnitsOfMeasure(rs.getString("unitsOfMeasure"));
         contract.setPriceUnit(rs.getString("priceUnit"));
         contract.setCif(rs.getString("cif"));
-        contract.setDni(rs.getString("dni"));
+
 
         return contract;
     }

@@ -24,7 +24,7 @@ public class ContractDao {
 
 
     public void addContract(/*Company company, */Contract contract) {
-        String sql = "INSERT INTO contract (number, dateBeginning, dateEnding, description, quantityServices, unitsOfMeasure, priceUnit, dni, cif) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO contract (number, dateBeginning, dateEnding, description, quantityServices, unitsOfMeasure, priceUnit,  cif) values (?, ?, ?, ?, ?, ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 contract.getNumber(),
                 contract.getDateBeginning(),
@@ -33,7 +33,6 @@ public class ContractDao {
                 contract.getQuantityServices(),
                 contract.getUnitsOfMeasure(),
                 contract.getPriceUnit(),
-                contract.getDni(),
                 contract.getCif()
         );
 /*
@@ -54,7 +53,7 @@ public class ContractDao {
 
 
     public void updateContract(Contract contract) {
-        String sql = "UPDATE contract SET dateBeginning = ?, dateEnding = ?, description = ?, quantityServices = ?, unitsOfMeasure = ?, priceUnit = ?, cif = ?, dni = ? WHERE number = ?";
+        String sql = "UPDATE contract SET dateBeginning = ?, dateEnding = ?, description = ?, quantityServices = ?, unitsOfMeasure = ?, priceUnit = ?, cif = ? WHERE number = ?";
         this.jdbcTemplate.update(sql,
                 contract.getDateBeginning(),
                 contract.getDateEnding(),
@@ -63,7 +62,7 @@ public class ContractDao {
                 contract.getUnitsOfMeasure(),
                 contract.getPriceUnit(),
                 contract.getCif(),
-                contract.getDni(),
+
                 contract.getNumber()
 
         );
@@ -82,8 +81,8 @@ public class ContractDao {
 
 
     public Contract getContractData() {
-        String sql = "SELECT DNI FROM request WHERE number = (SELECT MAX(number) from request) ";
-        String sql2 = "SELECT  MAX(cif) as cif FROM company WHERE servicetype = (SELECT servicetype from request where number = (SELECT MAX(number) from request) ) and cif NOT IN (SELECT cif from contract) and cif IS NOT NULL;";
+
+        String sql2 = "SELECT  cif FROM company WHERE company.cif NOT IN  (SELECT CIF from CONTRACT )";
         String sql3 =  "SELECT MAX(number) as number FROM contract ";
         Contract contract = new Contract();
         Contract contractAux = new Contract();
@@ -97,8 +96,7 @@ public class ContractDao {
             contractAux.setNumber(numeroAux);
             contract = jdbcTemplate.queryForObject(sql2, new Object[]{}, new ContractRowMapperCif());
             contractAux.setCif(contract.getCif());
-            contract = jdbcTemplate.queryForObject(sql, new Object[]{}, new ContractRowMapperDni());
-            contractAux.setDni(contract.getDni());
+
             return contractAux;
 
         }

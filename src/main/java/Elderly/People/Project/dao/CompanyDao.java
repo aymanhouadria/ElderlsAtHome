@@ -83,7 +83,7 @@ public class CompanyDao {
 
 
     public List<Company> getCompaniesElderly() {
-        String sql = "SELECT DISTINCT servicetype FROM Company WHERE servicetype IS NOT NULL AND cif NOT IN (SELECT cif from contract)";
+        String sql = "SELECT DISTINCT servicetype FROM Company WHERE servicetype IS NOT NULL";
         try {
             List<Company> companies = jdbcTemplate.query(sql, new CompanyRowMapperElderly());
             return companies;

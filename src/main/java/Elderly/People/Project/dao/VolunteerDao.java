@@ -22,7 +22,7 @@ public class VolunteerDao {
     }
 
     public void addVolunteer(Volunteer volunteer) {
-        String sql = "insert into volunteer (userv, pwd, address, name, phonenumber, email, hobbies, applicationdate, acceptationdate, accepted, birthdate) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "insert into volunteer (userv, pwd, address, name, phonenumber, email, hobbies, applicationdate, acceptationdate, accepted, birthdate) values (?, ?, ?, ?, ?, ?, ?, current_date , ?, ?, ?)";
         this.jdbcTemplate.update(sql,
                 volunteer.getUser(),
                 volunteer.getPwd(),
@@ -31,7 +31,6 @@ public class VolunteerDao {
                 volunteer.getPhoneNumber(),
                 volunteer.getEmail(),
                 volunteer.getHobbies(),
-                volunteer.getApplicationDate(),
                 volunteer.getAcceptationDate(),
                 volunteer.getAccepted(),
                 volunteer.getBirthDate()
@@ -43,8 +42,17 @@ public class VolunteerDao {
         this.jdbcTemplate.update(sql, userv);
     }
 
+
+
+    public void resolveVolunteer(String userv) {
+        String sql = "update volunteer set   acceptationdate = current_date , accepted = True  WHERE userv = ?";
+        this.jdbcTemplate.update(sql, userv);
+    }
+
+
+
     public void updateVolunteer(Volunteer volunteer) {
-        String sql = "update volunteer set  pwd = ?, address = ?, name = ?, phonenumber = ?, email = ?, hobbies = ?, applicationdate = ?, acceptationdate = ?, accepted = ?, birthdate= ?";
+        String sql = "update volunteer set  pwd = ?, address = ?, name = ?, phonenumber = ?, email = ?, hobbies = ?, applicationdate = ?, acceptationdate = current_date , accepted = True, birthdate= ? WHERE user = ?";
         this.jdbcTemplate.update(sql,
                 volunteer.getPwd(),
                 volunteer.getAddress(),
@@ -55,7 +63,9 @@ public class VolunteerDao {
                 volunteer.getApplicationDate(),
                 volunteer.getAcceptationDate(),
                 volunteer.getAccepted(),
-                volunteer.getBirthDate()
+                volunteer.getBirthDate(),
+                volunteer.getUser()
+
         );
     }
 
@@ -73,7 +83,7 @@ public class VolunteerDao {
 
 
    public List<Volunteer> getVolunteers() {
-        String sql = "SELECT * FROM volunteer where accepted IS NULL";
+        String sql = "SELECT * FROM volunteer where accepted IS null ";
         try {
             List<Volunteer> volunteers = jdbcTemplate.query(sql, new VolunteerRowMapper());
             return volunteers;
@@ -86,7 +96,7 @@ public class VolunteerDao {
 
 
     public List<Volunteer> getVolunteersElderly() {
-        String sql = "SELECT * FROM volunteer where accepted = 'True'";
+        String sql = "SELECT * FROM volunteer where accepted is True";
         try {
             List<Volunteer> volunteers = jdbcTemplate.query(sql, new VolunteerRowMapper());
             return volunteers;

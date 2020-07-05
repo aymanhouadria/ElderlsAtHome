@@ -16,7 +16,6 @@ public class Contract {
     private String unitsOfMeasure;
     private String priceUnit;
     private String cif;
-    private String dni;
     public Contract() {
     }
 
@@ -27,14 +26,6 @@ public class Contract {
 
     public void setCif(String cif) {
         this.cif = cif;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
     }
 
     public String getNumber() {
@@ -105,7 +96,7 @@ public class Contract {
                 ", unitsOfMeasure='" + unitsOfMeasure + '\'' +
                 ", priceUnit='" + priceUnit + '\'' +
                 ", cif='" + cif + '\'' +
-                ", dni='" + dni + '\'' +
+
                 '}';
     }
 }
