@@ -23,14 +23,14 @@ public class AvailabilityDao {
     }
 
     public void addAvailability(availability availability) {
-        String sql = "insert into availability (userv , dni, dia, horainicio, horafinal, disponible) values (?, ?, ?, ?, ?, FALSE )";
+        String sql = "insert into availability (userv , dni, dia, horainicio, horafinal, disponible) values (?, ?, ?, ?, ?, TRUE )";
         this.jdbcTemplate.update(sql,
                 availability.getUserv(),
                 availability.getDni(),
                 availability.getDia(),
                 availability.getHoraComienzo(),
-                availability.getHoraFinal(),
-                availability.getState()
+                availability.getHoraFinal()
+
         );
     }
 
@@ -67,9 +67,9 @@ public class AvailabilityDao {
     }
 
     public availability getAvailability() {
-        String sql = "SELECT userv FROM volunteer WHERE  acceptationdate = (SELECT max(ACCEPTATIONDATE) FROM volunteer)";
+        String sql = "SELECT userv FROM volunteer WHERE  applicationdate = (SELECT max(applicationDATE) FROM volunteer)";
         try {
-            availability availability= jdbcTemplate.queryForObject(sql, new AvailabilityRowMapper());
+            availability availability= jdbcTemplate.queryForObject(sql, new AvailabilityUserRowMapper());
             return availability;
         }
         catch(EmptyResultDataAccessException e) {

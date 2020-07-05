@@ -19,6 +19,12 @@
 
             <table class="text-light">
 
+                <tr>
+                    <td><label>Usuario:</label></td>
+                    <td><input type="text" class="form-control" id="userv" th:field="*{userv}" placeholder="Vuelva a introducir usuario" /></td>
+                    <td th:if="${#fields.hasErrors('userv')}" th:errors="*{userv}" class="error"></td>
+                </tr>
+
 
                 <tr>
                     <td><label>Dia:</label></td>
@@ -37,6 +43,18 @@
                     <td><input type="text" class="form-control" id="horaFinal" th:field="*{horaFinal}" placeholder="Hora en formato 24:00" /></td>
                     <td th:if="${#fields.hasErrors('horaFinal')}" th:errors="*{horaFinal}" class="error"></td>
                 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
                 <tr>
                     <td  colspan="2"><input type="submit" class="btn btn-info" value="Enviar solicitud de registro" /></td>
                 </tr>

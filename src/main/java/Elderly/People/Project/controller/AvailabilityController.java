@@ -43,7 +43,7 @@ public class AvailabilityController {
 
     @RequestMapping(value="/add")
     public String addAvailability(Model model) {
-        model.addAttribute("availability", availabilityDao.getAvailability());
+        model.addAttribute("availability", new availability());
         return "availability/add";
     }
 
